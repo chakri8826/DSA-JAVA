@@ -17,8 +17,8 @@ public class CountSubSetSum {
     
 
     public static void main(String[] args){
-         int arr[]={10,20,15};
-         int res=countSubsets(arr, 0, 25);
+         int arr[]={10,5,2,3,6};
+         int res=countSubsets(arr, 0, 8);
         // int res=countSubsets(arr, 3, 25);
          System.out.println(res);
         

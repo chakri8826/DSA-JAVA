@@ -1,5 +1,5 @@
 class Permutations{
-	   static void per(String s,int i){
+	static void per(String s,int i){
         if(i==s.length()-1){
             System.out.println(s);
             return;
@@ -10,7 +10,9 @@ class Permutations{
              charArray[i] = charArray[j];
              charArray[j] = temp;
              s = new String(charArray);
+
              per(s, i+1);
+
              char[] charArray1 = s.toCharArray();
              char temp1 = charArray1[i];
              charArray1[i] = charArray1[j];
@@ -20,9 +22,9 @@ class Permutations{
     }
     
      public static void main(String[] args){
-        per("ABCD",0);
- 
-
+        // per("()()()",0);
+        String s="()";
+        System.out.println(s.length());
     } 
 
 
