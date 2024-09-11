@@ -15,8 +15,6 @@ public class Combinations {
 
         curr.remove(curr.size()-1);
         combs(nums,curr,l,start+1,ans);
-
-    
     }
     public static List<List<Integer>> combine(int n, int k) {
         List<Integer> nums = new ArrayList<>();

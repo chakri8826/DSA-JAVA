@@ -45,8 +45,12 @@ public class Contest138 {
    
     public static void main(String[] args) {
         // System.out.println(generateKey(987,879 ,798 ));
-        System.out.println(stringHash("abcd",2));        
-
+        // System.out.println(stringHash("abcd",2)); 
+        String ss = "ab";
+        int s = ss.charAt(0)-'a';
+        // System.out.println(s+1);       
+        char c = 'a'+1;
+        System.out.println(c);
          
 
     }

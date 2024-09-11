@@ -30,6 +30,12 @@ public class Contest413{
         }
         return false;
     }
+    //OPTIMAL SOLUTION FOR PROBLEM-1
+      public boolean checkTwoChessboards(String c1, String c2) {
+        int s1 = (c1.charAt(0) - 'a') + (c1.charAt(1) - '0');
+        int s2 = (c2.charAt(0) - 'a') + (c2.charAt(1) - '0');
+        return s1 % 2 == s2 % 2;
+    }
 
     //SECOND PROBLEM
     public static int[] resultsArray(int[][] queries, int k) {
@@ -57,6 +63,9 @@ public class Contest413{
         return res;
     }
     public static void main(String[] args) {
-        
+        System.out.println('3'-'0');   
     }
 }
+
+
+
