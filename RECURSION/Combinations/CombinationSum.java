@@ -36,8 +36,8 @@ public class CombinationSum {
         return ans;
     }
     public static void main(String[] args) {
-        int arr[] ={2,3,6,7};
+        int arr[] ={10,1,2,7,6,1,5};
         CombinationSum cs = new CombinationSum();
-        System.out.println(cs.combinationSum(arr, 7));
+        System.out.println(cs.combinationSum(arr, 8));
     }
 }
