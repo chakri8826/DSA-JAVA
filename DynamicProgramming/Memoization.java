@@ -1,6 +1,5 @@
-import java.lang.*;
 import java.util.*;
-class Memoization {
+public class Memoization {
     static int memo[];
     static int fib(int n){
         int res;
