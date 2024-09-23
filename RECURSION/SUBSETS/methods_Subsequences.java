@@ -71,7 +71,7 @@ public class methods_Subsequences {
     public static void main(String[] args){
         int arr[]={2,3,5};
         List<Integer> li = new ArrayList<>();
-       countSubsets(0,li,0,arr, 8);
+        countSubsets(0,li,0,arr, 8);
 
     }   
 }

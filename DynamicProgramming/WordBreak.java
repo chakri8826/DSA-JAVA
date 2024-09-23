@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class substrings {
+public class WordBreak {
     // static ArrayList<String> ans = new ArrayList<>();
     // public static void genSubs(String s,String c,int i){
     //     if(i==s.length()){
@@ -32,21 +32,23 @@ public class substrings {
     public static boolean isValid(String s,List<String> wordDict){
         int n=s.length();
         boolean[] dp = new boolean[n+1];
-        // dp[0]=true;
+        dp[0]=true;
         for(int i=1;i<=n;i++){
             for(int j=0;j<i;j++){
-                if(  wordDict.contains(s.substring(j,i))){
+                if( dp[j] && wordDict.contains(s.substring(j,i))){
                     dp[i]=true;
                     break;
                 }
             }
         }
         return dp[n];
-
     }
+
     public static void main(String[] args) {
         List<String> wd = new ArrayList<>(Arrays.asList("leet","code"));
-        System.out.println(isValid("leetcode",wd));
+        // System.out.println(isValid("leetcode",wd));
+        String s = "leetcode";
+ 
     }
 }
 

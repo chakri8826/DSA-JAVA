@@ -21,12 +21,12 @@ class BookCollection {
         return true;
     }
     public static long findPages(int n, int[] arr, int m) {
-        Arrays.sort(arr);
-        int low=arr[0];
+        int low=Integer.MIN_VALUE;
         int high=0;
         long res=0;
         if (n < m) return -1;
         for(int i=0;i<n;i++){
+            low = Math.max(low, arr[i]);
             high+=arr[i];
         }
         while(low<=high){
@@ -43,7 +43,7 @@ class BookCollection {
     }
     public static void main(String[] args) {
         int arr[]={12,34,67,90};
-        System.out.println(findPages(4, arr,2));    
+        System.out.println(findPages(4, arr,4));    
     }
 }
 
