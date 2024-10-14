@@ -59,11 +59,11 @@ class Job{
 	public static void main(String args[])
 	{
 		ArrayList<Job> arr = new ArrayList<Job>();
-		arr.add(new Job('a', 2, 100));
-		arr.add(new Job('b', 1, 50));
-		arr.add(new Job('c', 2, 10));
-		arr.add(new Job('d', 1, 20));
-		arr.add(new Job('e', 3, 30));
+		arr.add(new Job('a', 2, 60));
+		arr.add(new Job('b', 1, 100));
+		arr.add(new Job('c', 3, 20));
+		arr.add(new Job('d', 2, 40));
+		arr.add(new Job('e', 1, 20));
 		System.out.println("Following is maximum profit sequence of jobs");
 		Job job = new Job();
 
