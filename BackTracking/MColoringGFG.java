@@ -1,3 +1,4 @@
+import java.util.*;
 public class MColoringGFG {
    public boolean isSafe(int u,List<int[]> edges,int m,int[] CA,int V){
         for(int[] edge : edges){
