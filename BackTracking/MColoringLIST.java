@@ -1,5 +1,5 @@
 import java.util.*;
-public class MColoringGFG {
+public class MColoringLIST {
    public boolean isSafe(int u,List<int[]> edges,int m,int[] CA,int V){
         for(int[] edge : edges){
             int v1 = edge[0];
@@ -31,3 +31,9 @@ public class MColoringGFG {
     
 
 }
+
+
+
+// ADJ LIST
+//TIME-COMPLEXITY-->O(M^V * E)     Checking if the Coloring is Safe: O(E):
+//SPACE-COMPLEXITY-->O(V+E)    //ADJ LIST-->O(V+E)
