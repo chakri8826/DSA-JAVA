@@ -1,7 +1,3 @@
-import java.util.*;
-import java.io.*;
-import java.lang.*;
-
 class Permutations{
     public static void permute(String str, int l, int r){
         if(l==r){

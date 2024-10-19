@@ -36,6 +36,7 @@ public class MColoringMATRIX{
         } else {
             System.out.println("No solution exists.");
         }
+        
 
         
     }

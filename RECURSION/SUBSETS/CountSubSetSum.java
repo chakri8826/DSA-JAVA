@@ -5,7 +5,7 @@ public class CountSubSetSum {
         }
         return countSubsets(arr, i+1, sum)+countSubsets(arr, i+1, sum-arr[i]);
     }
- 
+
     // static int countSubsets(int arr[],int n,int sum){
     //     if(n==0){
     //         return (sum==0)?1:0;

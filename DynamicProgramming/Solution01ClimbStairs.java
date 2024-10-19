@@ -1,5 +1,5 @@
 import java.util.*;
-public class ClimbStairs {
+public class ClimbStairs01 {
     //RECURSIVE APPROACH
     // public static int cs(int n,int i,int count){
     //     if(i==n) return ++count;
