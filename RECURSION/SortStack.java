@@ -5,10 +5,10 @@ public class SortStack {
             s.add(topEl);
             return;
         }
-        // if(topEl>=s.peek()){
-        //     s.add(topEl);
-        //     return;
-        // }
+        if(topEl>=s.peek()){
+            s.add(topEl);
+            return;
+        }
         int temp=s.pop();
         insertBottom(topEl, s);
         s.push(temp);
