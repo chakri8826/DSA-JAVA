@@ -1,5 +1,5 @@
 import java.util.*;
-public class MinimumCost03 {
+public class Solution03MinimumCost {
     //RECURSIVE
     // public static int mc(int k, int arr[],int ind){
     //     if(ind==0) return 0;

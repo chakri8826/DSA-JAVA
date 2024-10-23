@@ -1,7 +1,7 @@
 import java.util.*;
 
 import javax.swing.undo.StateEdit;
-public class GeekJump02 {
+public class Solution02GeekJump {
     //RECURSIVE APPROACH
     // public static int f(int ind,int arr[]){
     //     if(ind==0) return 0;

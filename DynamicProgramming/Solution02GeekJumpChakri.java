@@ -1,4 +1,4 @@
-public class GeekJumpChakri02 {
+public class Solution02GeekJumpChakri {
      public static int mE(int arr[], int N, int i, int curr, int res) {
         if (i == N - 1) {
             return Math.min(res, curr);

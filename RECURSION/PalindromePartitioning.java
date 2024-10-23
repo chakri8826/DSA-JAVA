@@ -15,6 +15,7 @@ public class PalindromePartitioning {
         }
         return true;
     }
+
     public void perfectPalis(String s, List<String> curr,int i){
         if(i==s.length()){
             res.add(new ArrayList<>(curr));
@@ -27,16 +28,18 @@ public class PalindromePartitioning {
                 curr.remove(curr.size()-1);
             }
         }
-
     }
 
     public List<List<String>> partition(String s) {
         perfectPalis(s, new ArrayList<>(), 0);
         return res;
     }
+
+
     public static void main(String[] args) {
-        PalindromePartitioning pp = new PalindromePartitioning();
-        System.out.println(pp.partition("aabb"));
+        // PalindromePartitioning pp = new PalindromePartitioning();
+        // System.out.println(pp.partition("aabb"));
+        System.out.println(Pali("bbab"));
     }
 }
 

@@ -1,4 +1,4 @@
-public class HOUSE_ROBBER2_05 {
+public class Solution05HOUSE_ROBBER2 {
     public static int r(int[] nums){
         int prev=nums[0],prev2=0;
         for(int i=1;i<nums.length;i++){

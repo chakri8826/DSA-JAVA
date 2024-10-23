@@ -30,4 +30,3 @@ class SplitString{
         System.out.println(maxUniqueSplit(str));
     }   
 }
- 

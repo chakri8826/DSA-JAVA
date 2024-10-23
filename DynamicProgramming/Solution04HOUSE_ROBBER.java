@@ -1,5 +1,5 @@
 import java.util.*;
-public class HOUSE_ROBBER {
+public class Solution04HOUSE_ROBBER {
     //recursive 
     // public static int rob(int[] nums,int ind) {
     //     if(ind==0) return  nums[ind];
