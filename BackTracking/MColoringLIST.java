@@ -1,6 +1,10 @@
 import java.util.*;
 public class MColoringLIST {
-   public boolean isSafe(int u,List<int[]> edges,int m,int[] CA,int V){
+    public boolean isSafe(int u,List<int[]> edges,int m,int[] CA,int V){
+        /*
+         * Condition 1: If v1 == u (i.e., the current vertex u is one of the vertices of the edge) and CA[v2] == m (i.e., the other vertex connected by the edge is already colored with color m), then returning false indicates that coloring u with m would not be safe because its neighbor has the same color.
+            Condition 2: If v2 == u (i.e., the current vertex u is the other vertex of the edge) and CA[v1] == m (i.e., the first vertex connected by the edge is already colored with color m), then it also returns false for the same reason
+         */
         for(int[] edge : edges){
             int v1 = edge[0];
             int v2 = edge[1];
@@ -28,7 +32,6 @@ public class MColoringLIST {
         return Mcolor(m,v,edges,0,CA);
     }
 
-    
 
 }
 
