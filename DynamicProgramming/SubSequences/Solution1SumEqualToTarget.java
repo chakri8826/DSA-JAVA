@@ -1,14 +1,14 @@
 import java.util.*;
-class SumEqualToTarget{
+class Solution1SumEqualToTarget{
     // public static boolean check(int arr[],int sum,int ind){
     //     if(sum==0) return true;
     //     if(ind==0) return arr[0]==sum;
-        // boolean nottake = check(arr,sum,ind-1 );
-        // boolean  take =false;
-        // if (arr[ind] <= sum) { 
-        //     take = check(arr,sum-arr[ind],ind-1);
-        // }
-        // return nottake || take;
+    //     boolean nottake = check(arr,sum,ind-1 );
+    //     boolean  take =false;
+    //     if (arr[ind] <= sum) { 
+    //         take = check(arr,sum-arr[ind],ind-1);
+    //     }
+    //     return nottake || take;
     // }
 
 
@@ -33,7 +33,7 @@ class SumEqualToTarget{
     //     for(int i=0;i<n;i++){
     //         dp[i][0]=true;
     //     }
-    //     if (arr[0] <= sum) {
+    //     if (arr[0] <= sum) { //there may be chance of arr[0] can be greater than sum so checking it
     //         dp[0][arr[0]] = true;
     //     }
     //     for(int ind=1;ind<n;ind++){

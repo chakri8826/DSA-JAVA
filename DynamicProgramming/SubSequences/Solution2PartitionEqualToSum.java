@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class PartitionEqualToSum{
+class Solution2PartitionEqualToSum{
     public int getSum(int[] nums){
         int sum=0;
         for(int num:nums){

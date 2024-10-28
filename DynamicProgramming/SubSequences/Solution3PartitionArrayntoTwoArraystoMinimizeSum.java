@@ -7,20 +7,21 @@ class Solution3PartitionArrayntoTwoArraystoMinimizeSum{
 //         }
 //         return sum;
 //     }
-//     public static void check(int arr[],int sum,boolean dp[][],int n){
-//         for(int i=0;i<n;i++) dp[i][0] = true;
-//         if(arr[0]<=sum  ) dp[0][arr[0]] = true;
-//         for(int ind = 1; ind<n;ind++){
-//             for(int tar=1;tar<=sum;tar++){
-//                 boolean nottake = dp[ind-1][tar];
-//                 boolean  take =false;
-//                 if (arr[ind] <= tar){ 
-//                     take = dp[ind-1][tar-arr[ind]];
-//                 }
-//                 dp[ind][tar] = nottake || take;
-//             }
-//         }
-//     }
+
+    // public static void check(int arr[],int sum,boolean dp[][],int n){
+    //     for(int i=0;i<n;i++) dp[i][0] = true;
+    //     if(arr[0]<=sum  ) dp[0][arr[0]] = true;
+    //     for(int ind = 1; ind<n;ind++){
+    //         for(int tar=1;tar<=sum;tar++){
+    //             boolean nottake = dp[ind-1][tar];
+    //             boolean  take =false;
+    //             if (arr[ind] <= tar){ 
+    //                 take = dp[ind-1][tar-arr[ind]];
+    //             }
+    //             dp[ind][tar] = nottake || take;
+    //         }
+    //     }
+    // }
  
 //     public int minimumDifference(int[] nums) {
 //         int n = nums.length;
