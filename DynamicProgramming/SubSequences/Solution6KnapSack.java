@@ -78,7 +78,8 @@ public class Solution6KnapSack {
     //         }
     //         return prev[W];
     // }
-    
+
+
 
 
     //FURTHER OPTIMIZATION FOR SINGLE ARRAY SPACE
@@ -101,7 +102,6 @@ public class Solution6KnapSack {
                 }
                 return prev[W];
     }
-
 
 
     static int knapSack(int W, int wt[], int val[]) {

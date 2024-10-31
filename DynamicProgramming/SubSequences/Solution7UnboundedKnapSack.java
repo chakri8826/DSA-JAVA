@@ -3,12 +3,7 @@ import java.util.Arrays;
 public class Solution7UnboundedKnapSack {
     // static int steal(int W, int wt[], int val[],int ind){
     //         if(ind==0){
-    //             if(wt[0]<=W){
     //                 return  W/wt[0]*val[0];
-    //             }
-    //             else{
-    //                 return 0;
-    //             }
     //         }
     //         int nottake = steal(W,wt,val,ind-1);
     //         int take = Integer.MIN_VALUE;
@@ -19,13 +14,8 @@ public class Solution7UnboundedKnapSack {
     // }
 
     // static int steal(int W, int wt[], int val[],int ind, int dp[][] ){
-    //         if(ind==0){
-    //             if(wt[0]<=W){
-    //                 return  W/wt[0]*val[0];
-    //             }
-    //             else{
-    //                 return 0;
-    //             }
+   //         if(ind==0){
+    //              return  W/wt[0]*val[0];
     //         }
     //         if(dp[ind][W]!=-1) return dp[ind][W];
     //         int nottake = steal(W,wt,val,ind-1,dp);
@@ -38,9 +28,7 @@ public class Solution7UnboundedKnapSack {
     
     // static int steal(int W, int wt[], int val[],int n, int dp[][] ){
     //         for (int w = 0; w <= W; w++) {
-    //             if (wt[0] <= w) {
     //                 dp[0][w] = w/wt[0]*val[0];
-    //             }
     //         }
     //         for(int i=1;i<n;i++){
     //             for(int w = 0;w<=W;w++){
@@ -56,24 +44,41 @@ public class Solution7UnboundedKnapSack {
     // }
 
 
+    // static int steal(int W, int wt[], int val[],int n){
+    //     int prev[] = new int[W+1];
+    //         for (int w = 0; w <= W; w++) {
+    //                 prev[w] = w/wt[0]*val[0];
+    //         }
+    //         for(int i=1;i<n;i++){
+    //             int curr[] = new int[W+1];
+    //             for(int w = 0;w<=W;w++){
+    //                 int nottake = prev[w];
+    //                 int take = Integer.MIN_VALUE;
+    //                 if(wt[i]<=w){
+    //                     take = val[i] + curr[w-wt[i]];
+    //                 }
+    //                 curr[w] = Math.max(take,nottake);
+    //             }
+    //             prev=curr;
+    //         }
+    //         return prev[W];
+    // }
+
+    //FURTHER OPTIMIZATION FOR SINGLE ARRAY SPACE
     static int steal(int W, int wt[], int val[],int n){
         int prev[] = new int[W+1];
             for (int w = 0; w <= W; w++) {
-                if (wt[0] <= w) {
                     prev[w] = w/wt[0]*val[0];
-                }
             }
             for(int i=1;i<n;i++){
-                int curr[] = new int[W+1];
                 for(int w = 0;w<=W;w++){
                     int nottake = prev[w];
                     int take = Integer.MIN_VALUE;
                     if(wt[i]<=w){
-                        take = val[i] + curr[w-wt[i]];
+                        take = val[i] + prev[w-wt[i]];
                     }
-                    curr[w] = Math.max(take,nottake);
+                    prev[w] = Math.max(take,nottake);
                 }
-                prev=curr;
             }
             return prev[W];
     }
