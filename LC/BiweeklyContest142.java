@@ -19,16 +19,16 @@ class BiweeklyContest142{
     }
 
 
-    // public int rec(int n, int k, int[][] stayScore, int[][] travelScore){
-    //     if(k<0) return 0;
-    //     int stay = stayScore[k][n]+rec(n,k-1,stayScore,travelScore);
-    //     int travel = Integer.MIN_VALUE;
-    //     for(int v=0;v<travelScore.length;v++){
-    //         int travelPoints = travelScore[v][n] + rec(v,k-1,stayScore,travelScore);
-    //         travel = Math.max(travel,travelPoints);
-    //     }
-    //     return Math.max(stay,travel);
-    // }
+    public int rec(int n, int k, int[][] stayScore, int[][] travelScore){
+        if(k<0) return 0;
+        int stay = stayScore[k][n]+rec(n,k-1,stayScore,travelScore);
+        int travel = Integer.MIN_VALUE;
+        for(int v=0;v<travelScore.length;v++){
+            int travelPoints = travelScore[v][n] + rec(v,k-1,stayScore,travelScore);
+            travel = Math.max(travel,travelPoints);
+        }
+        return Math.max(stay,travel);
+    }
     public int maxScore(int n, int k, int[][] stayScore, int[][] travelScore) {
         int max=0;
         
