@@ -79,7 +79,7 @@ public class S1longCommonSubSeq {
         int m = text2.length();
         // return checkLong(n-1,m-1,text1,text2);
 
-        // int dp[][] = new int[n][m]; 
+        // int dp[][] = new int[n][m];  //MEMOIZATION
         // int dp[][] = new int[n+1][m+1]; //FOR RIGHT SHIFT
         // for(int row[] : dp){
         //     Arrays.fill(row,-1);
@@ -96,3 +96,4 @@ public class S1longCommonSubSeq {
         
     }    
 }
+

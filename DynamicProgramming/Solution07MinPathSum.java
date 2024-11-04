@@ -12,7 +12,7 @@ class Solution07MinPathSum{
     //     // Recursive calculation: minimum path from left or up plus current cell value
     //     int left = minPath(m, n - 1, grid);
     //     int up = minPath(m - 1, n, grid);
-        
+
     //     return grid[m][n] + Math.min(left, up);
     // }
 
