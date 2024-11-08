@@ -137,12 +137,16 @@ public static boolean findNextPermutation(ArrayList<Integer> data) {
 // Driver Code
     public static void main(String args[])
     {
-    // matrix representation of graph
-    int graph[][] = {{0, 5, 5, 2, 3},
-                    {5, 0, 4, 3, 2},
-                    {5, 4, 0, 6, 1},
-                    {2, 3, 6, 0, 6},
-                    {3, 2, 1, 6, 0}};
+      int INF = Integer.MAX_VALUE;
+        
+        // Matrix representation of the graph
+        int[][] graph = {
+            {INF, 20, 30, 10, 11},
+            {15, INF, 16, 4, 2},
+            {3, 5, INF, 2, 4},
+            {19,6,18,INF,3},
+            {16,4,7,16,INF}
+        };
     int s = 0;
     System.out.println(
     travllingSalesmanProblem(graph, s));
@@ -152,5 +156,3 @@ public static boolean findNextPermutation(ArrayList<Integer> data) {
 // This code is contributed by adityapande88
 
 
-
-                   
