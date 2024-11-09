@@ -37,7 +37,7 @@ public class S2BASS2 {
     //         dp[prices.length][b]=0;
     //     }
     //     for(int ind=n-1;ind>=0;ind--){
-            // for(int buy=0;buy<2;buy++){ // WE CAN USE ANYOF THE ONE
+    //         for(int buy=0;buy<2;buy++){ // WE CAN USE ANYOF THE ONE
     //         for(int buy=1;buy>=0;buy--){
     //             int profit=0;
     //             if(buy==1){
@@ -49,7 +49,7 @@ public class S2BASS2 {
     //             dp[ind][buy] = profit;
     //         }
     //     }
-    //     return dp[0][1];
+    //     return dp[0][1];    // dp[0][1] is the optimal starting point since it reflects starting from day 0 with the choice to buy,
     // }
 
 
