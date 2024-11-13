@@ -103,7 +103,6 @@ public class S1LONGINCRSUBSEQ {
         }
         Collections.reverse(li);
         System.out.println(li);
-        
     }
 
 

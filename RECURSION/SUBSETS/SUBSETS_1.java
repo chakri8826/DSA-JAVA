@@ -33,8 +33,3 @@ public class SUBSETS_1 {
         System.out.println(s.subsets(nums));
     }
 }
-
-
-
-
-
