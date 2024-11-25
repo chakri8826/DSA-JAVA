@@ -37,9 +37,8 @@ public class PalindromePartitioning {
 
 
     public static void main(String[] args) {
-        // PalindromePartitioning pp = new PalindromePartitioning();
-        // System.out.println(pp.partition("aabb"));
-        System.out.println(Pali("bbab"));
+        PalindromePartitioning pp = new PalindromePartitioning();
+        System.out.println(pp.partition("aabb"));
     }
 }
 

@@ -4,7 +4,7 @@
 import java.util.*;
 class TSP{
 	
-static int V = 5;
+static int V = 4;
 
 // implementation of traveling 
 // Salesman Problem
@@ -141,11 +141,10 @@ public static boolean findNextPermutation(ArrayList<Integer> data) {
         
         // Matrix representation of the graph
         int[][] graph = {
-            {INF, 20, 30, 10, 11},
-            {15, INF, 16, 4, 2},
-            {3, 5, INF, 2, 4},
-            {19,6,18,INF,3},
-            {16,4,7,16,INF}
+            {INF, 20,30,10},
+            {15, INF, 16,4},
+            {3,5,INF,2},
+            {19,6,18,INF}
         };
     int s = 0;
     System.out.println(

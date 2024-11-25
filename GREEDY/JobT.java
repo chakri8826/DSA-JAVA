@@ -40,13 +40,15 @@ public class JobT implements Comparable<JobT>{
 
     }
     public static void main(String[] args) {
-        JobT arr[] ={new JobT('a', 4, 50),
-                    new JobT('b', 1, 5),
-                    new JobT('c', 1, 20),
-                    new JobT('d', 5, 10),
-                    new JobT('e', 5, 80) 
-                                     };
-        int t=5;
+        JobT arr[] ={new JobT('a', 3, 35),
+                    new JobT('b', 4, 30),
+                    new JobT('c', 4, 25),
+                    new JobT('d', 2, 20),
+                    new JobT('e', 3, 15), 
+                    new JobT('e', 1, 12), 
+                    new JobT('e', 2, 5) 
+                	};
+        int t=7;
         printJobScheduling(arr,t);
     }
 }

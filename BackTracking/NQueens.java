@@ -62,3 +62,4 @@ public class NQueens {
         System.out.println(q.solveNQueens(n));
     }
 }
+
