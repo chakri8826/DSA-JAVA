@@ -57,7 +57,6 @@ public class S51LONGESTSUBARRAY {
                 sum-=arr[l];
                 l++;
             }
-            maxlen = Math.max(maxlen,r-l+1);
             r++;
         }
         return maxlen;

@@ -110,13 +110,14 @@ public class Solution6KnapSack {
 
         // int dp[][] = new int[val.length][W+1];
         // for(int row[]:dp){
-            //     Arrays.fill(row,-1);
-            // }
-            // return steal(W,wt,val,val.length-1,dp);
+        //         Arrays.fill(row,-1);
+        //     }
+        // return steal(W,wt,val,val.length-1,dp);
             
             
         // int dp[][] = new int[val.length][W+1];
         // return steal(W,wt,val,val.length,dp);
+        
         
         return steal(W,wt,val,val.length);
 
