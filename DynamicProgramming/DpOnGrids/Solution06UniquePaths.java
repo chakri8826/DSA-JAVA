@@ -21,6 +21,15 @@ class Solution06UniquePaths{
 
 
     //TABULATION
+
+// First Row (i = 0):
+// There is only one way to move to any cell in the first row: by moving right from the starting point (0, 0).
+// Hence, all cells in the first row should be initialized to 1.
+
+// First Column (j = 0):
+// Similarly, there is only one way to move to any cell in the first column: by moving down from the starting point (0, 0).
+// Hence, all cells in the first column should also be initialized to 1.
+
     // public static int uniquePaths(int m, int n, int dp[][]) {
     //     if(m==0 && n==0) return 1;
     //     for(int i=0;i<=m;i++){

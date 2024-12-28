@@ -35,7 +35,9 @@ MCP(Minimum Cost Path) problem */
 
         // System.out.print(minCost(cost, 2, 2));
 
-        System.out.println(-1%9);
+        // System.out.println(-1%9);
+
+        System.out.println(4^7^12^6^2);
     }
 }
 

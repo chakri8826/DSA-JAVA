@@ -96,7 +96,7 @@ public class Solution06GeekTraining {
     public static int maximumPoints(int arr[][], int N) {
         // return mp(N-1,3,arr);
 
-        int dp[][] = new int[N][4];
+        // int dp[][] = new int[N][4];
         // for (int i = 0; i < N; i++) {
         //     Arrays.fill(dp[i], -1);
         // }
