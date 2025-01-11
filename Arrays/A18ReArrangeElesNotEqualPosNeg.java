@@ -49,7 +49,7 @@ public class A18ReArrangeElesNotEqualPosNeg {
     //     }
     //     else{
     //         for(int i=0;i<pos.size();i++){
-    //             arr.set(2*i,pos.get(i));
+    //             arr.set(2*i,pos.get(i));b
     //             arr.set(2*i+1,neg.get(i));
     //         }
     //         int ind = pos.size()*2;

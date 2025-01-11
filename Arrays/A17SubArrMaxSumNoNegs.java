@@ -11,7 +11,8 @@ public class A17SubArrMaxSumNoNegs {
             if (arr[i] < 0) {
                 sum = 0;
                 start = i + 1; // Reset start index for the next potential subarray
-            } else {
+            } 
+            else {
                 sum += arr[i];
                 if (sum >= maxi  ) {
                     maxi = sum;
@@ -34,3 +35,5 @@ public class A17SubArrMaxSumNoNegs {
         return li;
     }
 }
+
+
