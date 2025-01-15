@@ -28,6 +28,8 @@ public class Solution09MinFallingPath {
     //         dp[n-1][i]=matrix[n-1][i];
     //     }
     //     for(int row=n-2;row>=0;row--){
+                //it also works....
+                // for(int col=0;col<=n-1;col++){
     //         for(int col=n-1;col>=0;col--){
     //                 int d = matrix[row][col] +  dp[row+1][col];
     //                 int le = (col-1 >= 0) ? matrix[row][col] + dp[row + 1][col - 1] : Integer.MAX_VALUE;

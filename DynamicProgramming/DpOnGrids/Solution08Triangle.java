@@ -46,7 +46,7 @@ public class Solution08Triangle {
             }
             prev=curr;
         }
-        return prev[n-1];
+        return prev[0];
     }
     public int minimumTotal(List<List<Integer>> triangle) {
         int m=triangle.size();
@@ -57,10 +57,27 @@ public class Solution08Triangle {
         // return min(triangle,0,0,triangle.size(),dp); 
 
         
-        return min(triangle,triangle.size(),dp); 
+        // return min(triangle,triangle.size(),dp); 
+        return min(triangle,triangle.size()); 
 
     }
-    public static void main(String[] args) {
+public static void main(String[] args) {
+        // Create a triangle as a List of Lists
+        List<List<Integer>> triangle = new ArrayList<>();
 
+        // Add rows to the triangle
+        triangle.add(List.of(2));                 // Row 0
+        triangle.add(List.of(3, 4));              // Row 1
+        triangle.add(List.of(6, 5, 7));           // Row 2
+        triangle.add(List.of(4, 1, 8, 3));        // Row 3
+
+ 
+        Solution08Triangle solution = new Solution08Triangle();         
+        // Call the minimumTotal method with the generated triangle
+        int result = solution.minimumTotal(triangle);
+
+        // Print the result
+        System.out.println("Minimum path sum: " + result);
     }
+
 }

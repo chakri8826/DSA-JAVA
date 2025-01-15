@@ -36,15 +36,15 @@ public class Solution06GeekTraining {
     //         }
     //         return maxi;
     //     }
-        // if(dp[day][last]!=-1) return dp[day][last];
-        // int maxi=0;
-        // for(int i=0;i<3;i++){
-        //     if(i!=last){
-        //         int points = arr[day][i] + mp(day-1,i,arr,dp);
-        //         maxi = Math.max(maxi,points);
-        //     }
-        // }
-        // return dp[day][last] = maxi;
+    //     if(dp[day][last]!=-1) return dp[day][last];
+    //     int maxi=0;
+    //     for(int i=0;i<3;i++){
+    //         if(i!=last){
+    //             int points = arr[day][i] + mp(day-1,i,arr,dp);
+    //             maxi = Math.max(maxi,points);
+    //         }
+    //     }
+    //     return dp[day][last] = maxi;
     // }
 
 
@@ -71,27 +71,27 @@ public class Solution06GeekTraining {
 
 
     //SPACE OPTIMIZATION
-    public static int mp(int arr[][], int n){
-        int[] prev = new int[4];
-        prev[0] = Math.max(arr[0][1],arr[0][2]);
-        prev[1] = Math.max(arr[0][0],arr[0][2]);
-        prev[2] = Math.max(arr[0][0],arr[0][1]);
-        prev[3] = Math.max(Math.max(arr[0][0],arr[0][1]),arr[0][2]);
-        for(int day=1;day<n;day++){
-            int curr[] = new int[4];
-            for(int last = 0;last<4;last++){
-                curr[last] = 0;
-                for(int task =0;task<3;task++){
-                    if(task!=last){
-                        int points = arr[day][task] + prev[task];
-                        curr[last] = Math.max(curr[last],points);
-                    }
-                }
-            }
-            prev=curr;
-        }
-        return prev[3];
-    }
+    // public static int mp(int arr[][], int n){
+    //     int[] prev = new int[4];
+    //     prev[0] = Math.max(arr[0][1],arr[0][2]);
+    //     prev[1] = Math.max(arr[0][0],arr[0][2]);
+    //     prev[2] = Math.max(arr[0][0],arr[0][1]);
+    //     prev[3] = Math.max(Math.max(arr[0][0],arr[0][1]),arr[0][2]);
+    //     for(int day=1;day<n;day++){
+    //         int curr[] = new int[4];
+    //         for(int last = 0;last<4;last++){
+    //             curr[last] = 0;
+    //             for(int task =0;task<3;task++){
+    //                 if(task!=last){
+    //                     int points = arr[day][task] + prev[task];
+    //                     curr[last] = Math.max(curr[last],points);
+    //                 }
+    //             }
+    //         }
+    //         prev=curr;
+    //     }
+    //     return prev[3];
+    // }
 
     public static int maximumPoints(int arr[][], int N) {
         // return mp(N-1,3,arr);
@@ -100,9 +100,9 @@ public class Solution06GeekTraining {
         // for (int i = 0; i < N; i++) {
         //     Arrays.fill(dp[i], -1);
         // }
-        // return mp(arr, dp, N);
-      
-        return mp(arr, N);
+        // return mp(N-1, 3, arr, dp);
+
+        // return mp(arr, N);
         
 
     }
