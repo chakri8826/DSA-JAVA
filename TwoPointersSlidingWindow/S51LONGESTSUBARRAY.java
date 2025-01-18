@@ -25,15 +25,15 @@ public class S51LONGESTSUBARRAY {
     //     HashMap<Integer,Integer> map = new HashMap<>();
     //     for(int i=0;i<n;i++){
     //         psum+=arr[i];
-    //         if (!map.containsKey(psum)) {
-    //             map.put(psum, i);
-    //         }
     //         if(psum==k){
     //             maxlen = Math.max(maxlen,i+1);
     //         }
     //         else if(map.containsKey(psum-k)){
     //             int len = i- map.get(psum-k);
     //             maxlen = Math.max(maxlen,len);
+    //         }
+    //         if (!map.containsKey(psum)) {
+    //             map.put(psum, i);
     //         }
     //     }
     //     return maxlen;
