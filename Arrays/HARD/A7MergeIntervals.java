@@ -1,14 +1,15 @@
 import java.util.*;
-class mycmp implements Comparator<int[]> {
-    public int compare(int[] i1, int[] i2) {
-        return i1[0] - i2[0]; // Compare by the first element of each row
-    }
-}
+// class mycmp implements Comparator<int[]> {
+//     public int compare(int[] i1, int[] i2) {
+//         return i1[0] - i2[0]; // Compare by the first element of each row
+//     }
+// }
 
 public class A7MergeIntervals {
     public static void merge(int[][] intervals) {
         // Step 1: Sort intervals using the custom comparator
-        Arrays.sort(intervals, new mycmp());
+    //    Arrays.sort(intervals,new mycmp());
+        Arrays.sort(intervals, (a,b) -> a[0]-b[0]);
 
     }
 
@@ -24,4 +25,5 @@ public class A7MergeIntervals {
         merge(intervals);
     }
 }
+
 

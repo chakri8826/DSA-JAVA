@@ -22,7 +22,7 @@ class Solution3PartitionArrayntoTwoArraystoMinimizeSum{
     //         }
     //     }
     // }
- 
+
 //     public int minimumDifference(int[] nums) {
 //         int n = nums.length;
 //         int sum = getSum(nums);

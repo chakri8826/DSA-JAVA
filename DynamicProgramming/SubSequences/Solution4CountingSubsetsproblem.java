@@ -1,23 +1,9 @@
 public class Solution4CountingSubsetsproblem {
     //NOT WORKS AS IT DOES NOT CARE ABOUT 0
-    public static int count(int arr[], int sum, int ind) {
-        if (sum == 0) return 1; // Found a valid subset
-        if (ind == 0) {
-            return arr[0] == sum?1:0;
-        }
-        int notpick = count(arr, sum, ind - 1); // Exclude the current index
-        int pick = 0;
-        if (arr[ind] <= sum) {
-            pick = count(arr, sum - arr[ind], ind - 1); // Include the current index
-        }
-        return pick + notpick; // Return total ways
-    }
-
-
-    //RECURSIVE APPROACH
     // public static int count(int arr[], int sum, int ind) {
-    //     if (ind < 0) {
-    //         return sum==0?1:0;
+    //     if (sum == 0) return 1; // Found a valid subset
+    //     if (ind == 0) {
+    //         return arr[0] == sum?1:0;
     //     }
     //     int notpick = count(arr, sum, ind - 1); // Exclude the current index
     //     int pick = 0;
@@ -26,6 +12,20 @@ public class Solution4CountingSubsetsproblem {
     //     }
     //     return pick + notpick; // Return total ways
     // }
+
+
+    //RECURSIVE APPROACH
+    public static int count(int arr[], int sum, int ind) {
+        if (ind < 0) {
+            return sum==0?1:0;
+        }
+        int notpick = count(arr, sum, ind - 1); // Exclude the current index
+        int pick = 0;
+        if (arr[ind] <= sum) {
+            pick = count(arr, sum - arr[ind], ind - 1); // Include the current index
+        }
+        return pick + notpick; // Return total ways
+    }
 
 
     //ANOTHER APPROACH WITH MODIFIED BASE CASE WORKS SAME
@@ -111,7 +111,7 @@ public class Solution4CountingSubsetsproblem {
     //     return prev[sum];
     // }
 
-    
+
 
 
     public static void main(String[] args) {
