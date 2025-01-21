@@ -101,11 +101,11 @@ public class A9MissAndRepeat {
     //     //     bitNo++;
     //     // }
         
-    //     int bitNo = xor & ~(xor-1);
+    //     int number = xor & ~(xor-1);  //That number with 1 at required bit position
     //     int zero=0,one=0;
     //     for(int i=0;i<n;i++){
     //         //ZERO CLUB
-    //         if((arr[i] & bitNo)==0){
+    //         if((arr[i] & number)==0){
     //             zero ^= arr[i];
     //         }
     //         //ONE CLUB
@@ -115,7 +115,7 @@ public class A9MissAndRepeat {
     //     }
     //     for(int i=1;i<=n;i++){
     //         //ZERO CLUB
-    //         if((i & bitNo)==0){
+    //         if((i & number)==0){
     //             zero ^= i;
     //         }
     //         //ONE CLUB
