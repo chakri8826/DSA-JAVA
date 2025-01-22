@@ -1,5 +1,5 @@
 public class A1SecondLargest {
-      //BETTER
+    //BETTER
     // public int getSecondLargest(int[] arr) {
     //     int n = arr.length;
     //     int lar=arr[0];
@@ -32,6 +32,5 @@ public class A1SecondLargest {
             }
         }
         return slar;
-        
     }
 }
