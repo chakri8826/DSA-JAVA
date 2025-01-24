@@ -31,4 +31,3 @@ public class A6SubArrsXor {
         
     }
 }
-

@@ -26,3 +26,4 @@ public class S52COUNTSUBARRSWITHSUMK {
         System.out.println("The number of subarrays is: " + cnt);
     }
 }
+

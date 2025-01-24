@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class A24SpiralMatrix {
-        public List<Integer> spiralOrder(int[][] matrix) {
+    public List<Integer> spiralOrder(int[][] matrix) {
         int m=matrix.length;
         int n=matrix[0].length;
         int top=0,left=0,right=n-1,btm=m-1;

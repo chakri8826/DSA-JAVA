@@ -25,6 +25,7 @@ public class A21LongConsSeq {
     //     return maxi;
     // }
 
+    
     //BRUTE
     // public static int lengthOfLongestConsecutiveSequence(int[] arr, int N) {
     //     int maxi = 1;
@@ -53,6 +54,8 @@ public class A21LongConsSeq {
     //BETTER
     // public static int lengthOfLongestConsecutiveSequence(int[] arr, int N) {
     //     Arrays.sort(arr);
+    //IF ARR IS EMPTY 0 SHOULD BE ANSWER
+    // if(N==0) return 0;
     //     int maxi=1,cc=0,ls=Integer.MIN_VALUE;
     //     for(int i=0;i<N;i++){
     //         if(arr[i]==ls+1){
