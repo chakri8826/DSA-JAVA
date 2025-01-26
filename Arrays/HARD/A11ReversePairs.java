@@ -17,13 +17,13 @@ public class A11ReversePairs {
         int i=lb,j=mid+1,k=0;
         int cnt=0;
         int b[] = new int[ub-lb+1];
-        int j1=mid+1;
-        for(int ind=lb;ind<=mid;ind++){
-            while(j1<=ub && arr[ind]>(long)2*arr[j1]){
-                j1++;
+            int j1=mid+1;
+            for(int ind=lb;ind<=mid;ind++){
+                while(j1<=ub && arr[ind]>(long)2*arr[j1]){
+                    j1++;
+                }
+                cnt+=(j1-mid-1);
             }
-            cnt+=(j1-mid-1);
-        }
         
         while(i<=mid && j<=ub){
             if(arr[i]<arr[j]){
