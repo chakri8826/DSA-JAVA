@@ -10,6 +10,7 @@ class Node {
 }
 
 public class L3ReverseLL {
+    //ITERATIVE
     public static Node reverseLinkedList(Node head) {
         Node prev = null, curr = head, temp;
         while (curr != null) {
@@ -20,6 +21,16 @@ public class L3ReverseLL {
         }
         return prev; // New head of the reversed list
     }
+
+    //RECURSIVE 
+    // public static Node reverseLinkedList(Node head){
+    //     if(head==null || head.next==null)return head;
+    //     Node newNode = reverseLinkedList(head.next);
+    //     Node front = head.next;
+    //     front.next=head;
+    //     head.next=null;
+    //     return newNode;    
+    // }
 
     public static void main(String[] args) {
         // Create an example Linked List: 1 -> 2 -> 3 -> 4
@@ -54,3 +65,5 @@ public class L3ReverseLL {
         System.out.println();
     }
 }
+
+
