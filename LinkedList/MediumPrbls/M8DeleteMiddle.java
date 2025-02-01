@@ -3,8 +3,8 @@ public class M8DeleteMiddle {
     public ListNode deleteMiddle(ListNode head) {
         if(head==null || head.next==null) return null;
         ListNode temp = head;
-        int n = 0;
-        while (temp != null) {
+        int n = 1;
+        while (temp.next != null) {
             n++;
             temp = temp.next;
         }
