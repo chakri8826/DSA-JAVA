@@ -6,7 +6,7 @@ int main(){
     printf("Enter a decimal Number: ");
     scanf("%d",&dn);
     while(dn!=0){
-        rem=dn%2;
+        rem=dn%4;
         bn[i]=rem+'0';
         dn=dn/2;
         i++;
