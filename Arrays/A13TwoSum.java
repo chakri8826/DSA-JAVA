@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class A13TwoSum {
+    // BRUTE
     // public int[] twoSum(int[] nums, int target) {
     //     int n = nums.length;
     //     for(int i=0;i<n;i++){
@@ -14,8 +15,7 @@ public class A13TwoSum {
     // }
 
 
-
-
+    // BETTER
     // public int[] twoSum(int[] nums, int target){
     //     int n=nums.length;
     //     HashMap<Integer,Integer> map = new HashMap<>();
@@ -31,8 +31,24 @@ public class A13TwoSum {
 
 
 
+    // OPTIMAL FOR RETURNING NUMS BUT NOT INDICES
+    // public int[] twoSum(int[] nums, int target) {
+    //     Arrays.sort(nums);
+    //     int n = nums.length;
+    //     int l=0,r=n-1,sum=0;
+    //     while(l<r){
+    //         sum=nums[l]+nums[r];
+    //         if(sum==target){
+    //             return new int[] {l,r};
+    //         }
+    //         else if(sum<target) l++;
+    //         else r--;
+    //     }
+    //     return new int[] {};
+    // }
 
-    public int[] twoSum(int[] nums, int target){
+
+    public static int[] twoSum(int[] nums, int target){
         Arrays.sort(nums);
         int n=nums.length;
         int l=0,r=0,sum=0;
@@ -48,5 +64,10 @@ public class A13TwoSum {
             r++;
         }
         return new int[]{};
+    }
+    public static void main(String[] args) {
+        int arr[] = {1,2,4,5,6,8,9};
+        int tar = 7;
+        System.out.println(Arrays.toString(twoSum(arr,tar)));
     }
 }

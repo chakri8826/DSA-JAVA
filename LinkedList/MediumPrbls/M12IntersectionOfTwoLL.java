@@ -1,5 +1,5 @@
 public class M12IntersectionOfTwoLL {
-    // BETTER
+    // BRUTE
     // public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
     //     ListNode la=headA,lb=headB;
     //     HashSet<ListNode> set = new HashSet<>();
