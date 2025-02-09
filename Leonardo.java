@@ -25,7 +25,7 @@ class Leonardo{
                     break;
                 }
                 prod *= i;  // Multiply prod by prime i
-                count++;    // Increment count of primes
+                count++;    // Increment count of primess
             }
             i++;  // Move to the next number
         }
