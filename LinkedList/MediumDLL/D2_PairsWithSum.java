@@ -11,7 +11,7 @@ class Node{
 }
 
 public class D2_PairsWithSum {
-        // public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, Node head) {
+    // public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, Node head) {
     //     ArrayList<ArrayList<Integer>> res = new ArrayList<>();
     //     Node temp=head;
     //     HashSet<Integer> set = new HashSet<>();

@@ -45,7 +45,7 @@ public class A6LeftRotation {
 
 
     //OPTI
-     public void rotate(int[] nums, int k) {
+    public void rotate(int[] nums, int k) {
         int n=nums.length;
         k%=n;
 

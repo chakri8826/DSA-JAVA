@@ -7,7 +7,7 @@ public class D3_RemoveDups {
         Node i = head.next;
         while(i!=null){
             if(j.data!=i.data){
-                i.prev=j;
+                i.prev=j;   
                 j.next=i;
                 j=j.next;
             }

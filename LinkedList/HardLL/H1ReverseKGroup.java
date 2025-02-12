@@ -7,7 +7,7 @@ class ListNode {
 }
 class H1ReverseKGroup{
     // TRY
-//     public ListNode reverse(ListNode head){
+    // public ListNode reverse(ListNode head){
     //     ListNode prev=null,curr=head,temp=head;
     //     while(temp!=null){
     //         temp=temp.next;

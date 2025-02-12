@@ -61,6 +61,26 @@ public class A19NextPermutation {
             swap(start++,end--,nums);
         }
     }
+
+     // WE CANNOT DO LIKE THIS
+    // public void nextPermutation(int[] nums) {
+    //     int bp=-1,n=nums.length;
+    //     for(int i=n-1;i>0;i--){
+    //         for(int j=i-1;j>=0;j--){
+    //             if(nums[j]<nums[i]){
+    //                 swap(i,j,nums);
+    //                 reverse(j+1,n-1,nums);
+    //                 bp=1;
+    //                 break;
+    //             }
+    //         }
+    //             if(bp==1)break;
+    //     }
+    //     if(bp==-1){
+    //         reverse(0,n-1,nums);
+    //     }
+    // }
+
     public void nextPermutation(int[] nums) {
         int bp=-1,n=nums.length;
         for(int i=n-2;i>=0;i--){
