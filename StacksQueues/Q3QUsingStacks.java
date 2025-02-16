@@ -1,15 +1,18 @@
 import java.util.Stack;
 
-class Q3 {
+class Q3QUsingStacks {
     Stack<Integer> s1;
     Stack<Integer> s2;
-    public Q3() {
+    public Q3QUsingStacks() {
         s1 = new Stack<>();
         s2 = new Stack<>();
     }
     public void push(int x) {
         s1.add(x);
     }
+
+    
+    // TAKES O(N)
     // public int pop() {
     //     while(!s1.isEmpty()){
     //         s2.add(s1.pop());
@@ -20,6 +23,8 @@ class Q3 {
     //     }
     //     return num;
     // }
+
+    // TAKES O(1) AMORTIZED BUT OCCASSIONALLY TAKES O(N)
     public int pop(){
         if(s2.isEmpty()){
             while(!s1.isEmpty()){
@@ -28,7 +33,8 @@ class Q3 {
         }
         return s2.pop();
     }
-    
+
+    // TAKES O(N)
     // public int peek() {
     //     while(!s1.isEmpty()){
     //         s2.add(s1.pop());
@@ -39,6 +45,9 @@ class Q3 {
     //     }
     //     return num;
     // }
+
+
+    // TAKES O(1) AMORTIZED BUT OCCASSIONALLY TAKES O(N)
     public int peek(){
         if(s2.isEmpty()){
             while(!s1.isEmpty()){
@@ -54,4 +63,3 @@ class Q3 {
     }
 
 }
-

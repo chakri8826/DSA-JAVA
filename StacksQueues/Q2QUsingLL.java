@@ -29,6 +29,8 @@ class Q2QUsingLL
 	int pop()
 	{
         if(front==null && rear==null) return -1;
+
+        // ONE ELE UNTE RENDU DANIKI POINT CHESTU UNTAY SO REMOVE IT AND SET BOTH TO START
         else if(front==rear){
             int ele = front.data;
             front=rear=null;

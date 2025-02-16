@@ -19,7 +19,6 @@ class Weekly437 {
             totalWeight += pizzas[index];
             index -= 2;
         }
-
         return totalWeight;
     }
 
