@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Stack;
 
-public class M3NSE {
+public class M3PSE {
         public int[] prevSmaller(int[] A) {
         int n = A.length;
         int res[] = new int[n];
