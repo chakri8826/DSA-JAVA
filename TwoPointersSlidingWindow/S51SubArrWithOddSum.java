@@ -1,4 +1,4 @@
-public class S51SUBARRSWITHODDSUM {
+public class S51SubArrWithOddSum {
     public int numOfSubarrays(int[] arr) {
         // AS PSUM==0 AT STARTING 0 IS EVEN SO INITIALIZING ev=1
         int psum=0,cnt=0,n=arr.length,ev=1,od=0,mod=(int) 1e9+7;

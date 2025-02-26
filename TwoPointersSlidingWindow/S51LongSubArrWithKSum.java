@@ -1,4 +1,4 @@
-public class S51LONGESTSUBARRAY {
+public class S51LongSubArrWithKSum {
     //BRUTE FORCE
        // public int lenOfLongestSubarr(int[] arr, int k) {
     //     int n =arr.length;

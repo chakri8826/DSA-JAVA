@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class S52COUNTSUBARRSWITHSUMK {
+public class S52CountSubArrsWithSumK {
     // public static int subarraySum(int[] nums, int k) {
     //     HashMap<Integer,Integer> map = new HashMap<>();
     //     int count=0,sum=0,n=nums.length;;
