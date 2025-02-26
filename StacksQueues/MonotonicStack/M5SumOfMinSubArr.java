@@ -45,6 +45,7 @@ class Solution {
         return pse;
     }
 
+
     public int sumSubarrayMins(int[] arr) {
         int n = arr.length,mod = (int) 1e9+7;
         int[] nse = findNSE(arr);
