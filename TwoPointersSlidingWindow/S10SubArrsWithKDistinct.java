@@ -35,7 +35,6 @@ public class S10SubArrsWithKDistinct {
         return res;
     }
 
-    
     public int subarraysWithKDistinct(int[] nums, int k) {
         return calc(nums,k)-calc(nums,k-1);
     }
