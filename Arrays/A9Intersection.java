@@ -19,6 +19,21 @@ public class A9Intersection {
 		}
 		return res;
 	}
+	public static void main(String[] args) {
+		ArrayList<Integer> arr1 = new ArrayList<>();
+		ArrayList<Integer> arr2 = new ArrayList<>();
+		arr1.add(1);
+		arr1.add(2);
+		arr1.add(3);
+		arr1.add(4);
+		arr1.add(5);
+		arr2.add(3);
+		arr2.add(4);
+		arr2.add(5);
+		arr2.add(6);
+		arr2.add(7);
+		System.out.println(findArrayIntersection(arr1, arr1.size(), arr2, arr2.size()));
+	}
 }
 
 

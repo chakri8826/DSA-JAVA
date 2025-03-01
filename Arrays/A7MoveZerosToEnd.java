@@ -42,6 +42,7 @@ public class A7MoveZerosToEnd {
                 break;
             }
         }
+        // J INDEX WILL ALWAYS POINTS TO THE ZERO
         if(j!=-1){
             for(int i=j+1;i<n;i++){
                 if(nums[i]!=0){

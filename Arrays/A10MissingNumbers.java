@@ -1,6 +1,6 @@
 class A10MissingNumbers{
-        // public int missingNumber(int[] nums) {
-    //     int n=nums.length;
+    // public int missingNumber(int[] nums) {
+        //int n=nums.length;
         // int vis[] = new int[n+1];
         // for(int i=0;i<n;i++){
         //     vis[nums[i]]=1;
@@ -12,9 +12,10 @@ class A10MissingNumbers{
         //         break;
         //     }
         // }
-    //     return j;
+        //     return j;
     // }
 
+    
     // public int missingNumber(int[] nums) {
     //     int n=nums.length,sum=0;
     //     for(int i=0;i<=n;i++){
@@ -37,6 +38,7 @@ class A10MissingNumbers{
     //     }
     //     return xor1^xor2;
     // }    
+
 
     //USING XOR  still optimizing
     public static int missingNumber(int[] nums) {

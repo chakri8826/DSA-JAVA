@@ -17,25 +17,25 @@ class A8UnionTwoSorted{
         int i=0,j=0,n=a.length,m=b.length;
         ArrayList<Integer> res = new ArrayList<>();
         while(i<n&&j<m){
-        if(a[i]==b[j]){
-            if (res.isEmpty() || res.get(res.size() - 1) != a[i]) {
-                res.add(a[i]);
+            if(a[i]==b[j]){
+                if (res.isEmpty() || res.get(res.size() - 1) != a[i]) {
+                    res.add(a[i]);
+                }
+                i++;
+                j++;
             }
-            i++;
-            j++;
-        }
-        else if(a[i]<b[j]){
-            if (res.isEmpty() || res.get(res.size() - 1) != a[i]) {
-                res.add(a[i]);
+            else if(a[i]<b[j]){
+                if (res.isEmpty() || res.get(res.size() - 1) != a[i]) {
+                    res.add(a[i]);
+                }
+                i++;
             }
-            i++;
-        }
-        else{
-            if (res.isEmpty() || res.get(res.size() - 1) != b[j]) {
-                res.add(b[j]);
+            else{
+                if (res.isEmpty() || res.get(res.size() - 1) != b[j]) {
+                    res.add(b[j]);
+                }
+                j++;
             }
-            j++;
-        }
         }
         while(i<n){
             if (res.isEmpty() || res.get(res.size() - 1) != a[i]) {

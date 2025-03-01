@@ -21,26 +21,26 @@ public class A6LeftRotation {
 
     //Better
     // public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {
-    //     int n = arr.size();
-    //     int d = k % n; // Handle cases where k > n
-    //     ArrayList<Integer> temp = new ArrayList<>();
+        // int n = arr.size();
+        // int d = k % n; // Handle cases where k > n
+        // ArrayList<Integer> temp = new ArrayList<>();
 
-    //     // Step 1: Store the first `d` elements in a temporary list
-    //     for (int i = 0; i < d; i++) {
-    //         temp.add(arr.get(i));
-    //     }
+        // // Step 1: Store the first `d` elements in a temporary list
+        // for (int i = 0; i < d; i++) {
+        //     temp.add(arr.get(i));
+        // }
 
-    //     // Step 2: Shift the remaining elements to the left
-    //     for (int i = d; i < n; i++) {
-    //         arr.set(i - d, arr.get(i)); // Correctly shift elements
-    //     }
+        // // Step 2: Shift the remaining elements to the left
+        // for (int i = d; i < n; i++) {
+        //     arr.set(i - d, arr.get(i)); // Correctly shift elements
+        // }
 
-    //     // Step 3: Place the elements from `temp` at the end
-    //     for (int i = n-d; i < n; i++) {
-    //         arr.set(i, temp.get(i-(n-d))); // Restore `temp` elements
-    //     }
+        // // Step 3: Place the elements from `temp` at the end
+        // for (int i = n-d; i < n; i++) {
+        //     arr.set(i, temp.get(i-(n-d))); // Restore `temp` elements
+        // }
 
-    //     return arr;
+        // return arr;
     // }
 
 
