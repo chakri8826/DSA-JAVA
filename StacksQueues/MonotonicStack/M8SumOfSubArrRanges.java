@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class M7SumOfSubArrRanges {
+public class M8SumOfSubArrRanges {
     // BRUTE
     // public long subArrayRanges(int[] nums) {
     //     int n = nums.length;

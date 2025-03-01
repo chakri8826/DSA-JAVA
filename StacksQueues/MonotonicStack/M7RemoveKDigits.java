@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution{
+class M7RemoveKDigits{
     public String removeKdigits(String num, int k) {
         Stack<Character> st = new Stack<>();
         for(int i=0;i<num.length();i++){
@@ -36,7 +36,7 @@ class Solution{
     }
  
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        M7RemoveKDigits solution = new M7RemoveKDigits();
         
         // Example cases
         System.out.println(solution.removeKdigits("1432999", 3)); // Output: "1219"
