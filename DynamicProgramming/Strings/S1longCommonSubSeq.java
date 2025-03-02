@@ -18,7 +18,7 @@ public class S1longCommonSubSeq {
     //     return dp[i][j] = Math.max(checkLong(i-1,j,text1,text2,dp),checkLong(i,j-1,text1,text2,dp));
     // }
 
-
+ 
     //SHIFTING ONE UNIT TO RIGHT WARDS
     // public int checkLong(int i,int j,String text1,String text2,int dp[][]){
     //     if(i==0 || j==0) return 0;
@@ -84,6 +84,7 @@ public class S1longCommonSubSeq {
         // for(int row[] : dp){
         //     Arrays.fill(row,-1);
         // }
+        // return checkLong(n,m,text1,text2,dp);  //FOR RIGHT SHIFT
         // return checkLong(n-1,m-1,text1,text2,dp);
 
 
@@ -96,4 +97,3 @@ public class S1longCommonSubSeq {
         
     }    
 }
-

@@ -55,8 +55,14 @@ public class S4LCpali {
     public static void main(String args[]) {
         String s1= "bbbab";
         String s2= reverseString(s1);
-        System.out.print("The Longest Common Subsequence is ");
-        lcs(s1,s2);
+        // System.out.print("The Longest Common Subsequence is ");
+        // lcs(s1,s2);
+      char c = 'z';
+        char n = (char) ((c - 'a' + 1 + 26) % 26 + 'a');  
+        System.out.println(n);
+
+
+
     }
 }
 
