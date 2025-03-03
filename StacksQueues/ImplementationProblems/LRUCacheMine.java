@@ -1,5 +1,5 @@
 import java.util.*;
-class LRUCache {
+class LRUCacheMine {
     int capacity;
     Node head,tail;
     Map<Integer,Node> map;
@@ -32,7 +32,7 @@ class LRUCache {
         map.remove(ln.key);
     }
 
-    public LRUCache(int capacity) {
+    public LRUCacheMine(int capacity) {
         this.capacity=capacity;
         head = new Node(0,0);
         tail = new Node(0,0);
@@ -72,7 +72,7 @@ class LRUCache {
     }
 
     public static void main(String[] args) {
-        LRUCache cache = new LRUCache(2);
+        LRUCacheMine cache = new LRUCacheMine(2);
         cache.put(1, 1);
         cache.put(2, 2);
         System.out.println(cache.get(1));       // returns 1

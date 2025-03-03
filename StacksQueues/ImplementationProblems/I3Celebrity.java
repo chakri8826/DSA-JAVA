@@ -73,6 +73,7 @@ public class I3Celebrity {
         }
         return t;
     }
+    
     public static void main(String[] args) {
         I3Celebrity obj = new I3Celebrity();
         int mat[][] = {{0, 0, 1, 0},
