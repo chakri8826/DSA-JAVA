@@ -29,6 +29,7 @@ public class Main {
         """;
 
         StringTokenizer tokenizer = new StringTokenizer(code, " \t\n\r\f{}[]();");
-        System.out.println("Number of tokens: " + tokenizer.countTokens());
+        // System.out.println("Number of tokens: " + tokenizer.countTokens());
+        System.out.println(1%2 );
     }
 }

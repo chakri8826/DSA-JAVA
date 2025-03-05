@@ -143,4 +143,3 @@ public class M9LargestRectHistogram {
         return maxArea;
     }
 }
-
