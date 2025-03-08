@@ -7,6 +7,13 @@ public class I1MinNumOfBitFlips {
         }
         return cnt;
 
+        // O(31) METHOD
+        //  for(int i=0;i<=31;i++){
+        //     if((n&(1<<i))!=0)cnt++;
+        // }
+        // return cnt;
+
+
         // DIRECT METHOD
         // return Integer.bitCount(n);
     }

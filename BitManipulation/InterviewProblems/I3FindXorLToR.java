@@ -1,4 +1,4 @@
-class I2FindXorLToR{
+class I3FindXorLToR{
       // BRUTE
     // public static int findXOR(int l, int r) {
     //     int res=0;
