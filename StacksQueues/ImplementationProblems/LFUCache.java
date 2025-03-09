@@ -102,7 +102,7 @@ class LFUCache {
             tail.prev = head;
         }
 
-        /** add new node into head of list and increase list size by 1 **/
+        /** add new node in the head of list and increase list size by 1 **/
         public void addNode(DLLNode curNode) {
             DLLNode nextNode = head.next;
             curNode.next = nextNode;

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class I9PrimeFactosUsingSieve{
+    // Most numbers ≤ 200000 have prime factors that are ≤ 100100.
     static int MAXN = 100100;
     static int[] spf = new int[MAXN];
     static void sieve() {
