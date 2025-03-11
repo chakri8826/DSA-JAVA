@@ -38,6 +38,31 @@ public class G5ValidParenthesis {
     //     return f(s,0,0,dp)==1?true:false;
     // }
 
+
+    // Using Boolean[][] instead of int[][] as Boolean is a wrapper class that will store null initially.
+    // arrays of wrapper classes (e.g., Boolean[], Integer[]) are initialized with null because they are objects.
+
+    // public boolean f(String s, int ind, int cnt,Boolean[][] dp) {
+    //     if (cnt < 0) return false;  
+    //     if (ind == s.length()) return cnt == 0; 
+    //     if (dp[ind][cnt] != null) return dp[ind][cnt];  
+
+    //     if (s.charAt(ind) == '(') {
+    //         return dp[ind][cnt] = f(s, ind + 1, cnt + 1, dp);
+    //     }
+    //     if (s.charAt(ind) == ')') {
+    //         return dp[ind][cnt] = f(s, ind + 1, cnt - 1, dp);
+    //     }
+    //     // '*' can be '(', ')' or ''
+    //     return dp[ind][cnt] = f(s, ind + 1, cnt + 1, dp) || f(s, ind + 1, cnt - 1, dp) || f(s, ind + 1, cnt, dp);
+    // }
+
+    // public boolean checkValidString(String s) {
+    //     int n = s.length();
+    //     Boolean[][] dp = new Boolean[n + 1][n + 1]; 
+    //     return f(s, 0, 0, dp);
+    // }
+
     public boolean checkValidString(String s) {
         int min=0,max=0;
         for(int i=0;i<s.length();i++){
