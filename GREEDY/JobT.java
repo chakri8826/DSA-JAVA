@@ -55,7 +55,7 @@ public class JobT implements Comparable<JobT>{
             maxDeadline = Math.max(maxDeadline, jobs.get(i)[1]);
         }
         
-        Boolean check[] = new Boolean[maxDeadline+1];
+        Boolean check[] = new Boolean[maxDeadline];
         for(int i=0;i<jobs.size();i++){
             // ZERO BASED WE ARE TAKING
             for(int j=jobs.get(i)[1]-1;j>=0;j--){
