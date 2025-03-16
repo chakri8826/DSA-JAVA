@@ -37,7 +37,42 @@ public class JobT implements Comparable<JobT>{
 		for (char jb : job)
 			System.out.print(jb + " ");
 		System.out.println();
+    }
 
+
+
+	// NO EXTRA CLASS FOR SORTING 
+	public ArrayList<Integer> JobSequencing(int[] id, int[] deadline, int[] profit) {
+        ArrayList<int[]> jobs = new ArrayList<>();
+        for(int i=0;i<id.length;i++){
+            jobs.add(new int[]{id[i],deadline[i],profit[i]});
+        }
+        Collections.sort(jobs,(a,b)->Integer.compare(b[2],a[2]));
+        int cnt=0,prof=0;
+        
+        int maxDeadline = 0;
+        for (int i = 0; i < jobs.size(); i++) {
+            maxDeadline = Math.max(maxDeadline, jobs.get(i)[1]);
+        }
+        
+        Boolean check[] = new Boolean[maxDeadline+1];
+        for(int i=0;i<jobs.size();i++){
+            // ZERO BASED WE ARE TAKING
+            for(int j=jobs.get(i)[1]-1;j>=0;j--){
+                if(check[j]==null){
+                    prof+=jobs.get(i)[2];
+                    cnt++;
+                    check[j]=true;
+                    break;
+                }
+            }
+        }
+        
+        ArrayList<Integer> li = new ArrayList<>();
+        li.add(cnt);
+        li.add(prof);
+        return li;
+        
     }
     public static void main(String[] args) {
         JobT arr[] ={new JobT('a', 3, 35),

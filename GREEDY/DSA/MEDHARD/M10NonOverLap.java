@@ -1,6 +1,7 @@
 import java.util.*;
 class G8NonOverLap{
-        // public int eraseOverlapIntervals(int[][] intervals) {
+    // MISTAKE I THOUGHT
+    // public int eraseOverlapIntervals(int[][] intervals) {
     //     Arrays.sort(intervals,(a,b)-> a[0]==b[0]?Integer.compare(a[1],b[1]):Integer.compare(a[0],b[0]) );
     //     int pre[] = intervals[0];
     //     int cnt=0;

@@ -23,8 +23,16 @@ public class M2Jump1 {
     }
 
     public boolean canJump(int[] nums) {
-        if(nums.length==1)return true;
-        Boolean dp[] = new Boolean[nums.length];
-        return f(nums,0,dp);
+        // if(nums.length==1)return true;
+        // Boolean dp[] = new Boolean[nums.length];
+        // return f(nums,0,dp);
+
+        int n=nums.length,maxInd=0;
+        for(int i=0;i<n;i++){
+            if(maxInd>=n-1)return true;
+            if(nums[i]==0 && maxInd<=i) return false;
+            maxInd=Math.max(maxInd,i+nums[i]);            
+        }
+        return true;
     }    
 }

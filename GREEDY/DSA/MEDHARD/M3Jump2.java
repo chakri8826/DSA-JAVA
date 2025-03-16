@@ -17,7 +17,20 @@ public class M3Jump2 {
     }
 
     public int jump(int[] nums) {
-        Integer dp[] = new Integer[nums.length];
-        return f(nums,0,dp);
+        // Integer dp[] = new Integer[nums.length];
+        // return f(nums,0,dp);
+
+
+        int n=nums.length,l=0,r=0,jumps=0;
+        while(r<n-1){
+            int farStep=0;
+            for(int i=l;i<=r;i++){
+                farStep = Math.max(farStep,i+nums[i]);
+            }
+            l=r+1;
+            r=farStep;
+            jumps++;
+        }
+        return jumps;
     }
 }
