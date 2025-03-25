@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class I2PowerSet {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();

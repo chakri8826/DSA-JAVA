@@ -7,6 +7,7 @@ public class I8PowXN {
         // m = Math.abs(m); can cause overflow when n = Integer.MIN_VALUE (-2³¹),
         // because Math.abs(Integer.MIN_VALUE) = Integer.MIN_VALUE (it cannot be represented as a positive integer in int).
         // So, we will use long instead of int.
+
         m=Math.abs(m);
         while(m>0){
             if((m&1)==1){
@@ -27,9 +28,4 @@ public class I8PowXN {
         System.out.println(res);
     }
 }
-
-
-
-
-
 

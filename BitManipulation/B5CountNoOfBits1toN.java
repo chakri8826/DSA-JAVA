@@ -20,3 +20,4 @@ class B5CountNoOfBits1toN{
         System.out.println(countSetBits(n));
     }
 }
+

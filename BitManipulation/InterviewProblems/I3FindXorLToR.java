@@ -22,3 +22,4 @@ class I3FindXorLToR{
         System.out.println(findXOR(5, 8));
     }   
 }
+

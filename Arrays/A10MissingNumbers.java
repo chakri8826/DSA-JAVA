@@ -41,17 +41,32 @@ class A10MissingNumbers{
 
 
     //USING XOR  still optimizing
-    public static int missingNumber(int[] nums) {
-        int n=nums.length,xor1=0,xor2=0;
-        for(int i=0;i<n;i++){
-            xor1^=i;
-            xor2^=nums[i];
+    // public static int missingNumber(int[] nums) {
+    //     int n=nums.length,xor1=0,xor2=0;
+    //     for(int i=0;i<n;i++){
+    //         xor1^=i;
+    //         xor2^=nums[i];
+    //     }
+    //     xor1^=n;
+    //     return xor1^xor2;
+    // } 
+
+
+     public static int missingNumber(int[] nums){
+        int n=nums.length,ans=0;
+        for(int i=0;i<32;i++){
+            int cnt=0;
+            for(int j=0;j<n;j++){
+                if((nums[j]&(1<<i))!=0)cnt++;
+            }
+            if(cnt%2!=0){
+                ans=ans|(1<<i);
+            }
         }
-        xor1^=n;
-        return xor1^xor2;
-    } 
+        return ans;
+    }
     public static void main(String[] args) {
-        int nums[] = {1,2,3,4};
+        int nums[] = {2,2,4};
         System.out.println(missingNumber(nums));
     }   
 }

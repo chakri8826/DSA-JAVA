@@ -5,7 +5,7 @@ class I9PrimeFactosUsingSieve{
     // Most numbers ≤ 200000 have prime factors that are ≤ 100100.
     static int MAXN = 100100;
     static int[] spf = new int[MAXN];
-    static void sieve() {
+    static void sieve(){
         for(int i=2;i<MAXN;i++){
             spf[i]=i;
         }
@@ -27,7 +27,7 @@ class I9PrimeFactosUsingSieve{
             N=N/spf[N];
         }
         return li;
-    }
+    } 
     public static void main(String[] args) {
         sieve();
         int N = 100;

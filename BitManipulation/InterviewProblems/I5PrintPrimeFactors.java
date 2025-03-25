@@ -11,6 +11,8 @@ public class I5PrintPrimeFactors {
             }
         }
         // last remaining prime factor is added to the list only once. 
+        if(N>1)if(!li.contains(N))li.add(N);
+        
         int[] arr = new int[li.size()];
         for (int i = 0; i < li.size(); i++) {
             arr[i] = li.get(i);
