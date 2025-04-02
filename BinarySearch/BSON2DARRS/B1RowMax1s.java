@@ -1,16 +1,17 @@
 public class B1RowMax1s {
+    // O(N*M) approach
         // public int rowWithMax1s(int arr[][]) {
     //     int ind=-1,maxi=0;
-    //     for(int i=0;i<arr.length;i++){
-    //         int cnt=0;
-    //         for(int j=0;j<arr[i].length;j++){
-    //             if(arr[i][j]==1)cnt++;
-    //         }
-    //         if(cnt>maxi){
-    //             ind=i;
-    //             maxi=cnt;
-    //         }
-    //     }
+        // for(int i=0;i<arr.length;i++){
+        //     int cnt=0;
+        //     for(int j=0;j<arr[i].length;j++){
+        //         if(arr[i][j]==1)cnt++;
+        //     }
+        //     if(cnt>maxi){
+        //         ind=i;
+        //         maxi=cnt;
+        //     }
+        // }
     //     return ind;
     // }
     
@@ -33,6 +34,8 @@ public class B1RowMax1s {
         }
         return ans;
     } 
+
+    // O(N*logM) approach  
     public int rowWithMax1s(int arr[][]) {
         int ind=-1,maxi=0;
         for(int i=0;i<arr.length;i++){
