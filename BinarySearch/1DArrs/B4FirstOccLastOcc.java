@@ -17,6 +17,7 @@ public class B4FirstOccLastOcc {
         return ans;
     }
     
+
     public int findLast(int[] arr, int x) {
         int n=arr.length;
         int low=0,high=n-1,ans=-1;
@@ -26,16 +27,15 @@ public class B4FirstOccLastOcc {
                 ans=mid;
                 low=mid+1;
             }
-            else if(arr[mid]>x){
-                high=mid-1;
+            else if(arr[mid]<x){
+                low=mid+1;
             }
-            else low=mid+1;
+            else high=mid-1; 
         }
         return ans;
     }
 
 
-    // USING LOWER-BOUND AND UPPER-BOUN DIRECTLY
     public int findLower(int[] arr, int x) {
         int n=arr.length;
         int low=0,high=n-1,ans=n;
@@ -63,6 +63,7 @@ public class B4FirstOccLastOcc {
         }
         return ans;
     }
+ 
     public int[] searchRange(int[] nums, int target) {
         // int low = findLower(nums,target);
         // // AS LOW MAY BE n  OR IT IS NOT EQUAL TO TARGET WE RETURN {-1,-1}

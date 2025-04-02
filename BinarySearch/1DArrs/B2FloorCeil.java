@@ -17,7 +17,7 @@ public class B2FloorCeil {
     
     static int findCeil(int[] arr, int x) {
         int n=arr.length;
-        int low=0,high=n-1,ans=-1;
+        int low=0,high=n-1,ans=n;
         while(low<=high){
             int mid = low+(high-low)/2; 
             if(arr[mid]>=x){
@@ -34,5 +34,12 @@ public class B2FloorCeil {
         int flor = findFloor(arr,x);
         int ceil = findCeil(arr,x);
         return new int[]{flor,ceil};
+    }
+    public static void main(String[] args) {
+        B2FloorCeil obj = new B2FloorCeil();
+        int[] arr = {1, 2, 4};
+        int x = 5;
+        int[] result = obj.getFloorAndCeil(x, arr);
+        System.out.println("Floor: " + result[0] + ", Ceil: " + result[1]);
     }
 }

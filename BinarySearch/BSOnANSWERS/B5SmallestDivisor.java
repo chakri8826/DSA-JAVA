@@ -19,8 +19,12 @@ public class B5SmallestDivisor {
     // }
 
     public int smallestDivisor(int[] nums, int threshold) {
-        int maxi=0;
-        for(int i=0;i<nums.length;i++){
+        int maxi=0,n=nums.length;
+
+        // we cant get <=threshold in this case
+        if(n>threshold) return -1;
+        
+        for(int i=0;i<n;i++){
             maxi=Math.max(maxi,nums[i]);
         }
         int low=1,high=maxi;

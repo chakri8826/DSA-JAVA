@@ -1,5 +1,5 @@
 public class B4Bouquets {
-        public int findBoq(int[] bloomDay,int day,int k){
+    public int findBoq(int[] bloomDay,int day,int k){
         int boq=0,cnt=0;
         for(int i=0;i<bloomDay.length;i++){
             if(bloomDay[i]<=day) cnt++;
@@ -23,9 +23,12 @@ public class B4Bouquets {
     //     }
     //     return -1;
     // }
-
-    public int minDays(int[] bloomDay, int m, int k) {
+ public int minDays(int[] bloomDay, int m, int k) {
         int maxi=0,n=bloomDay.length;
+
+        // IF NOT POSSIBLE TO MAKE M BOUQUETS
+        long val = (long) m * k;
+        if (val > n) return -1;
         for(int day:bloomDay){
             maxi=Math.max(maxi,day);
         } 
@@ -40,8 +43,6 @@ public class B4Bouquets {
             }
             else low=mid+1;
         }
-
-        // IF NOT POSSIBLE LOW WILL GO TO (maxi+1) U CAN RETURN -1 AT THERE.
-        return low==maxi+1?-1:low;
+        return low;
     }
 }
