@@ -61,6 +61,7 @@ class G7Candy{
 
 
     public int candy(int[] ratings) {
+        // sum is initialized with 1 as for the first child(i=0) we need to give at least 1 candy.(we start with i=1)
         int i=1,n=ratings.length,sum=1;
         while(i<n){
             if(ratings[i]==ratings[i-1]){
