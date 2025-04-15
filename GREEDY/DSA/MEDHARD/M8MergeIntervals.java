@@ -25,9 +25,16 @@ public class M8MergeIntervals {
     //         res.add(new int[]{start,end});
     //     }
     //     return res.toArray(new int[res.size()][]);
-    // } 
+    
+    // }
 
 
+    // Even though you updated a, it also updated what's inside the list — because both point to the same array.
+    // int[] a = {1, 3};
+    // List<int[]> list = new ArrayList<>();
+    // list.add(a);
+    // a[1] = 5;
+    // System.out.println(list.get(0)[1]); // Outputs 5
 
     public int[][] merge(int[][] intervals) {
         int n = intervals.length;

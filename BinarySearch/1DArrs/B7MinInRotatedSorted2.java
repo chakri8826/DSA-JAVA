@@ -1,5 +1,5 @@
 public class B7MinInRotatedSorted2 {
-     public int findMin(int[] nums) {
+    public int findMin(int[] nums) {
         int n=nums.length,low=0,high=n-1,ans=Integer.MAX_VALUE;
         while(low<=high){
             int mid=low+(high-low)/2;

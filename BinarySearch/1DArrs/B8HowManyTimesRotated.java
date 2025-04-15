@@ -1,5 +1,4 @@
 import java.util.List;
-
 public class B8HowManyTimesRotated {
      public int findKRotation(List<Integer> arr) {
         int low=0,high=arr.size()-1,ans=-1;
@@ -17,7 +16,7 @@ public class B8HowManyTimesRotated {
                 }
                 // ans = Math.min(ans,arr.get(low));
                 low=mid+1;
-            }
+            }   
             else{
                 if(ans==-1 || arr.get(mid)<arr.get(ans)  ){
                     ans=mid;

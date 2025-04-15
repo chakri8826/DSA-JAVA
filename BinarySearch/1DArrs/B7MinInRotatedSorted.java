@@ -19,4 +19,4 @@ class B7MinInRotatedSorted{
         }
         return ans;
     }
-}
+}   

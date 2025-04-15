@@ -28,7 +28,7 @@ class G8NonOverLap{
             }
         }
         return n-cnt;
-    }
+    } 
     public static void main(String[] args) {
         G8NonOverLap obj = new G8NonOverLap();
 

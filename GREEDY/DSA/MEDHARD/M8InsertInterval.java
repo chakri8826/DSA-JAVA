@@ -21,7 +21,7 @@ class G8InsertInterval{
             mini=Math.min(mini,intervals[i][0]);
             maxi=Math.max(maxi,intervals[i][1]);
             i++;
-        }
+        } 
         res.add(new int[]{mini,maxi});
 
         // RIGHT SIDE REMAINING
@@ -30,7 +30,7 @@ class G8InsertInterval{
             i++;
         }
         return res.toArray(new int[res.size()][]);
-    }
+    } 
     public static void main(String[] args) {
         G8InsertInterval obj = new G8InsertInterval();
         int intervals[][] = {{1,2}, {3,5}, {6,7}, {8,10}, {12,16}};
@@ -40,4 +40,4 @@ class G8InsertInterval{
             System.out.println(res[i][0]+" "+res[i][1]);
         }
     }
-}
+} 

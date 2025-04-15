@@ -75,4 +75,4 @@ public class B4FirstOccLastOcc {
         if(low==-1) return new int[]{-1,-1};
         return new int[]{low,findLast(nums,target)};
     }
-}
+}   
