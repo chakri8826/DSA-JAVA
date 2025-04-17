@@ -1,5 +1,5 @@
 public class GasStations {
-       /*
+    /*
         int a = 5;
         int b = 2;
 
@@ -28,7 +28,7 @@ public class GasStations {
     //         }
     //         track[ind]++;
     //         k--;
-    //     }
+    //     } 
         
     //     double maxi=0.0;
     //     for(int i=1;i<n;i++){
@@ -84,7 +84,7 @@ public class GasStations {
             else high=mid;
         }
         return high;
-    }
+    }   
     public static void main(String[] args) {
         int stations[] = {0, 2, 4, 8, 9};
         int k = 3;
