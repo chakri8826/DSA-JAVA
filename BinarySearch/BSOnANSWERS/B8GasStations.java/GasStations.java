@@ -68,7 +68,7 @@ public class GasStations {
             cnt+=numInBw;
         }
         return cnt;
-    }
+    }   
     
     public static double findSmallestMaxDist(int stations[], int k) {
         int n = stations.length;

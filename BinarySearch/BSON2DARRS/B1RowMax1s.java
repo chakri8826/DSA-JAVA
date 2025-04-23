@@ -22,10 +22,10 @@ public class B1RowMax1s {
         int low=0,high=n-1,ans=n;
         while(low<=high){
             int mid = low+(high-low)/2;
-             // UPPER-BOUND
-            // if(arr[i][mid]>0){
+             // UPPER-BOUND (last occurance of 0)
+            // if(arr[mid]>0){
             
-            // LOWER-BOUND
+            // LOWER-BOUND (first occurance of 1)
             if(arr[mid]>=x){
                 ans=mid;
                 high=mid-1;

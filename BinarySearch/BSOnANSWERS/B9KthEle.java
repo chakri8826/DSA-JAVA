@@ -1,5 +1,5 @@
 public class B9KthEle {
-        // public int kthElement(int a[], int b[], int k) {
+    // public int kthElement(int a[], int b[], int k) {
     //     int cnt=0,i=0,j=0,m=a.length,n=b.length;
     //     while(i<m && j<n){
     //         if(a[i]<b[j]){
