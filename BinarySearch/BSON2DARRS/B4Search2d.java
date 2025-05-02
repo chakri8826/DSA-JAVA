@@ -1,5 +1,5 @@
 public class B4Search2d {
-   // BS ON COLS
+   // BS ON COLumns
     public int findRow(int col,int[][] mat){
         int maxi=Integer.MIN_VALUE,row=-1;
         for(int i=0;i<mat.length;i++){
@@ -20,7 +20,7 @@ public class B4Search2d {
             else low=mid+1;
         }
         return new int[]{-1,-1};
-    }
+    } 
 
 
     // BS ON ROWS
