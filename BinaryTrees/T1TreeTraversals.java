@@ -7,7 +7,6 @@ public class T1TreeTraversals {
         inOrder(root.right,li);
     }   
     
-
     public static void preOrder(TreeNode root,List<Integer> li){
         if(root==null)return ;
         li.add(root.data);
