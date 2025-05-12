@@ -32,17 +32,5 @@ public class M10BottomView {
     }
 
 
-    // RECURSIVE SOLUTION
-    // public void preOrder(TreeNode root,List<Integer> ans,int dep){
-    //     if(root==null)return;
-    //     if(dep==ans.size()) ans.add(root.val);
-    //     preOrder(root.right,ans,dep+1);
-    //     preOrder(root.left,ans,dep+1);
-    // } 
-    // public List<Integer> rightSideView(TreeNode root) {
-    //     ArrayList<Integer> ans = new ArrayList<>();
-    //     if(root==null) return ans;
-    //     preOrder(root,ans,0);
-    //     return ans;
-    // }
+
 }
