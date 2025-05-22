@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class H11MorrisTraversal{
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> inOrder = new ArrayList<>();
@@ -22,7 +25,7 @@ class H11MorrisTraversal{
                     inOrder.add(curr.val);
                     curr=curr.right;
                 }
-            }
+            } 
         }
         return inOrder;
     }
