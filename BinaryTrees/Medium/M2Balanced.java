@@ -32,6 +32,7 @@ class M2Balanced{
         if(root==null) return 0;
         int l = f(root.left);
         if(l==-1) return -1;
+        
         int r = f(root.right);
         if(r==-1)return -1;
         if(Math.abs(l-r)>1)return -1;

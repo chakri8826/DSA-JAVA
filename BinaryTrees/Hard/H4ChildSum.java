@@ -1,4 +1,3 @@
-
 public class H4ChildSum {
     public static boolean f(Node root){
         if(root==null)return true;

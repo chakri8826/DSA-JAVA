@@ -19,7 +19,7 @@ class TreeNode {
     }
 }
 public class M8VerticalOrder {
-     class Tuple {
+    class Tuple {
         TreeNode node;
         int row, col;
         Tuple(TreeNode n, int r, int c) {
@@ -56,14 +56,14 @@ public class M8VerticalOrder {
             // System.out.println(rows);
             List<Integer> colList = new ArrayList<>();
             for (PriorityQueue<Integer> pq : rows.values()) {
-                // System.out.println(pq);
+                System.out.println(pq);
                 while (!pq.isEmpty()) {
                     colList.add(pq.poll());
                 }
             }
-            // System.out.println(colList);
+            // System.out.println();
             result.add(colList);
-        }
+        } 
 
         // for(Map.Entry<Integer,TreeMap<Integer,PriorityQueue<Integer>>> rows:map.entrySet()){
         //     List<Integer> li = new ArrayList<>();

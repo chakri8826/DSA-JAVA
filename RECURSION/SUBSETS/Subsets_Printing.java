@@ -12,6 +12,7 @@ public class Subsets_Printing {
     //     }        
     // }
 
+
     // public void subs(List<Integer> tempList,int []nums,int start){
     //     if(start==nums.length){
     //         ans.add(new ArrayList<>(tempList));

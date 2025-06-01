@@ -17,6 +17,7 @@ public class H2LCA {
     //     li.remove(li.size()-1);
     //     return false;
     // }
+
     // public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     //     ArrayList<Integer> li1 = new ArrayList<>();
     //     ArrayList<Integer> li2 = new ArrayList<>();
@@ -34,8 +35,8 @@ public class H2LCA {
     // }
 
     
-    // OPTIMIZED
-
+   
+    // MISTAKEN
     // public TreeNode f(TreeNode root, TreeNode p, TreeNode q){
     //     if(root==null || root==p || root==q)return root;
     //     if(f(root.left,p,q)!=null && f(root.right,p,q)!=null)return root;
@@ -45,6 +46,8 @@ public class H2LCA {
     //     }
     //     return root.right;
     // }  
+
+     // OPTIMIZED
     public TreeNode f(TreeNode root, TreeNode p, TreeNode q){
         if(root==null || root==p || root==q) return root;
 
@@ -55,3 +58,4 @@ public class H2LCA {
         return (left != null) ? left : right;
     }    
 }
+
