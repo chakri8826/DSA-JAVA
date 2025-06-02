@@ -66,7 +66,7 @@ class Trie{
     }
 }
 
-class T3LongValidWord {
+public class T3LongValidWord {
     public String longestValidWord(String[] words) {
         Trie trie = new Trie();
         for(int i=0;i<words.length;i++){
@@ -90,4 +90,10 @@ class T3LongValidWord {
         } 
         return ans;
     }
+    public static void main(String[] args) {
+        T3LongValidWord t3 = new T3LongValidWord();
+        String[] words = {"a", "banana", "app", "appl", "ap", "apply", "apple"};
+        System.out.println(t3.longestValidWord(words));
+    }
+    
 }   
