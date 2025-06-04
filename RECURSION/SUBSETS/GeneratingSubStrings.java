@@ -6,7 +6,7 @@ class  GeneratingSubStrings {
         int n = s.length();
         int count=0;
         for (int start = 0; start < n; start++) {
-            for (int end = start + 1; end <= n; end++) {
+            for (int end = start + 1; end <=n; end++) {
                 String temp=s.substring(start, end);
                 // int zero=0;
                 // int one=0;
@@ -26,7 +26,7 @@ class  GeneratingSubStrings {
             }
         }
         return count;
-    }
+    } 
      public static void main(String[] args) {
         String s =  "abc";
         int k=2;
