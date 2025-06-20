@@ -20,7 +20,7 @@ public class G2BFS {
             }
         }
         return bfs;
-    }
+    } 
 
     static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
         adj.get(u).add(v);
