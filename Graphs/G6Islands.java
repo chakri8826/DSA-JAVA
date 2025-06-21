@@ -26,7 +26,7 @@ public class G6Islands {
         }
     }
     public void BFS(int f,int s,char[][] grid,boolean vis[][]){
-        vis[f][s]=true;
+        vis[f][s]=true; 
         Queue<Pair> q= new LinkedList<>();
         q.offer(new Pair(f,s));
         int n = grid.length;
