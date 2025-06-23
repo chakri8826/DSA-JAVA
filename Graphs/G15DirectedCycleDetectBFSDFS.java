@@ -1,4 +1,7 @@
-class G15DirectedCycleDetect {
+import java.util.LinkedList;
+import java.util.Queue;
+
+class G15DirectedCycleDetectBFSDFS {
     public boolean DFS(int start, ArrayList<ArrayList<Integer>> adj,int vis[],int pathVis[]){
         vis[start]=1;
         pathVis[start]=1;
@@ -33,16 +36,46 @@ class G15DirectedCycleDetect {
             int v = edge[1];
             adj.get(u).add(v);
         }
-        int vis[] = new int[V];
-        int pathVis[] = new int[V];
-        for(int i=0;i<V;i++){
-            if(vis[i]==0){
-                // if(DFS(i,adj,vis,pathVis))return true;
+
+        // DFS
+        // int vis[] = new int[V];
+        // int pathVis[] = new int[V];
+        // for(int i=0;i<V;i++){
+        //     if(vis[i]==0){
+        //         // if(DFS(i,adj,vis,pathVis))return true;
                 
-                // SINGLE VIS NO preVis
-                if(DFS(i,adj,vis))return true;
+        //         // SINGLE VIS NO preVis
+        //         if(DFS(i,adj,vis))return true;
+        //     }
+        // }
+        // return false;
+
+
+        // BFS
+        int inDeg[] = new int[V];
+        for(int i=0;i<V;i++){
+            for(int it:adj.get(i)){
+                inDeg[it]++;
             }
         }
-        return false;
+        Queue<Integer> q = new LinkedList<>();
+        for(int i=0;i<V;i++){
+            if(inDeg[i]==0){
+                q.offer(i);
+            }
+        }
+        ArrayList<Integer> li = new ArrayList<>();
+        while(!q.isEmpty()){
+            int top = q.poll();
+            li.add(top);
+            for(int it:adj.get(top)){
+                inDeg[it]--;
+                if(inDeg[it]==0){
+                    q.offer(it);
+                }
+            }
+        }
+        return li.size()<V;
     }
 }
+
