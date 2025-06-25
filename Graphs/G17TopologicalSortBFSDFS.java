@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*; 
 
-public class G17TopologicalSort {
+public class G17TopologicalSortBFSDFS {
     public static void DFS(int start, ArrayList<ArrayList<Integer>> edges, boolean[] vis, Stack<Integer> st) {
         vis[start] = true;
         for (int it : edges.get(start)) {
