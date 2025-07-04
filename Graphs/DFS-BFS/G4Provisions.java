@@ -25,7 +25,7 @@ public class G4Provisions {
         int[][] adjMatrix = {
             {1, 1, 0},
             {1, 1, 0},
-            {0, 0, 1}
+            {0, 0, 1}   
         };
         int n = adjMatrix.length;
         ArrayList<ArrayList<Integer>> adjList = new ArrayList<>();

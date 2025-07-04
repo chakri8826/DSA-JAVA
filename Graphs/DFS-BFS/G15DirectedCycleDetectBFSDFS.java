@@ -8,10 +8,10 @@ class G15DirectedCycleDetectBFSDFS {
         for(int it:adj.get(start)){
             if(vis[it]==0){
                 if(DFS(it,adj,vis,pathVis))return true;
-                pathVis[it]=0;
             }
             else if(pathVis[it]==1)return true;
         }
+        pathVis[start]=0;
         return false;
     } 
     

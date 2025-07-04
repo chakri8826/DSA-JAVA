@@ -21,13 +21,10 @@ public class G9CycleDetectionBFSDFS {
             int node = p.node;
             int par = p.par;
             for(int it:adj.get(node)){
-                if(it!=par){
-                    if(!vis[it]){
-                        vis[it]=true;
-                        q.offer(new Pair(it,node));
-                    }
-                    else return true;
-                }
+                if (!vis[it]) {
+                    vis[it] = true;
+                    q.offer(new Pair(it, node));
+                } else if (it != par) return true;
             }
         }
         return false;
@@ -36,7 +33,6 @@ public class G9CycleDetectionBFSDFS {
         vis[start]=true;
         for(int it:adj.get(start)){
             if(!vis[it]){
-                vis[it]=true;
                 if(DFS(it,start,adj,vis)) return true;
             }
             else  if(it!=par){
