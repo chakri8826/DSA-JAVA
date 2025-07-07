@@ -46,6 +46,5 @@ public class S6PathWithMinEffort {
             }
         }
         return -1;
-        
     }    
 }

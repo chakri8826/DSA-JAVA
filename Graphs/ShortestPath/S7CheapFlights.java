@@ -1,59 +1,59 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 class Pair {
-    int node, cost;
+    int dist, node, steps;
 
-    public Pair(int node, int cost) {
+    public Pair(int steps, int node, int dist) {
+        this.steps = steps;
         this.node = node;
-        this.cost = cost;
+        this.dist = dist;
     }
 }
 
-class State {
-    int stops, node, dis;
+class Pair1 {
+    int v, wt;
 
-    public State(int stops, int node, int dis) {
-        this.stops = stops;
-        this.node = node;
-        this.dis = dis;
+    public Pair1(int v, int wt) {
+        this.v = v;
+        this.wt = wt;
     }
 }
-
 public class S7CheapFlights {
-    public int CheapestFLight(int n, int flights[][], int src, int dst, int k) {
-        
-        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
-        for(int i=0;i<n;i++) adj.add(new ArrayList<>());
-        for(int edge[]:flights){
-            adj.get(edge[0]).add(new Pair(edge[1],edge[2]));
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        ArrayList<ArrayList<Pair1>> adj = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            adj.add(new ArrayList<>());
         }
-        
         int dist[] = new int[n];
         Arrays.fill(dist,Integer.MAX_VALUE);
         dist[src]=0;
-        
-        Queue<State> q = new LinkedList<>();
-        q.offer(new State(0,src,0));
-        
+        PriorityQueue<Pair> q = new PriorityQueue<>((a,b)->a.steps-b.steps);
+        for(int[] fli:flights){
+            int u = fli[0];
+            int v = fli[1];
+            int wt = fli[2];
+            adj.get(u).add(new Pair1(v,wt));
+        }
+        q.offer(new Pair(0,src,0));
         while(!q.isEmpty()){
-            State s = q.poll();
-            int stops = s.stops;
-            int node = s.node;
-            int dis = s.dis;
-            for(Pair p:adj.get(node)){
-                int v=p.node;
-                int cost = p.cost;
-                int newCost = dis+cost;
-                if(stops<=k && newCost<dist[v]){
-                    dist[v]=newCost;
-                    if (stops + 1 <= k)
-                        q.offer(new State(stops + 1, v, dis+cost));
+            Pair p = q.poll();
+            int steps = p.steps;
+            int node = p.node;
+            int dis = p.dist;
+            if(steps>k)continue;
+            for(Pair1 nbr:adj.get(node)){
+                int v = nbr.v;
+                int wt = nbr.wt;
+                if(dis+wt<dist[v]){
+                    dist[v]=dis+wt;
+                    q.offer(new Pair(steps+1,v,dis+wt));
                 }
             }
-        }   
+        }
         return dist[dst]==Integer.MAX_VALUE?-1:dist[dst];
     }    
 }
