@@ -14,15 +14,6 @@ public class ConnectedComponents {
         {0, 0, 0, 0, 0, 0, 1, 1, 0}
     };
     
-    public static void DFS(int i) {
-        visited[i] = 1;
-        for (int j = 0; j < 9; j++) {
-            if (A[i][j] == 1 && visited[j] == 0) {
-                DFS(j);
-            }
-        }
-    }
-    
     public static int cc() {
         int count = 0;
         for (int v = 0; v < 9; v++) {
@@ -33,6 +24,16 @@ public class ConnectedComponents {
         }
         return count;
     }
+
+    public static void DFS(int i) {
+        visited[i] = 1;
+        for (int j = 0; j < 9; j++) {
+            if (A[i][j] == 1 && visited[j] == 0) {
+                DFS(j);
+            }
+        }
+    }
+    
 
     public static void main(String[] args) {
         System.out.println("Number of connected components: " + cc());
