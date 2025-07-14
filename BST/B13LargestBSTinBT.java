@@ -5,6 +5,7 @@ class Node{
         this.data=data;
     }
 }
+
 class NodeValue{
     int min,max,size;
     NodeValue(int min,int max,int size){
