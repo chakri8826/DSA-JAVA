@@ -1,5 +1,5 @@
 class B5KthSmallest{
-    // BRUTE --> DOINT ANY OF TRAVERSAL AND SORTING AND GETTING THE KTH VALUE TC -> O(n) + O(log N),sc ->O(N)
+    // BRUTE --> DOING ANY OF TRAVERSAL AND SORTING AND GETTING THE KTH VALUE TC -> O(n) + O(log N),sc ->O(N)
     // BETTER --> TC-O(N) AND SC-O(N)
     // public void inOrder(TreeNode root,int k,List<Integer> li){
     //     if(root==null) return ;
