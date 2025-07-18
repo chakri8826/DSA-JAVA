@@ -16,7 +16,7 @@ class B9InOrderSuccessor{
 				predecessor = root;
 				root=root.right;
 			}
-			else break;
+			
 		}
 		return predecessor;
 	}
@@ -30,8 +30,6 @@ class B9InOrderSuccessor{
                 curr = curr.left;
             } else if (curr.data <= x.data) {
                 curr = curr.right;
-            } else {
-                break;
             }
         }
         return (successor != null) ? successor.data : -1;

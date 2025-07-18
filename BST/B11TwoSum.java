@@ -11,10 +11,12 @@ class TreeNode{
 class BSTIterator{
     boolean reverse;
     Stack<TreeNode> st = new Stack<>();
+
     BSTIterator(TreeNode root,boolean reverse){
         this.reverse=reverse;
         pushAll(root);
     }
+
     public void pushAll(TreeNode root){
         while(root!=null){
             st.push(root);
@@ -22,6 +24,7 @@ class BSTIterator{
             else root=root.left;
         }
     }
+
     public int next(){
         TreeNode top = st.pop();
         if(reverse)pushAll(top.left);
@@ -69,6 +72,7 @@ public class B11TwoSum {
         }
         return false;
     }
+    
     public static void main(String[] args) {
         // Create a sample BST: [5,3,6,2,4,null,7]
         TreeNode root = new TreeNode(5);
