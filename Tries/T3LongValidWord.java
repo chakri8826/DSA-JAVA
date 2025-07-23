@@ -74,7 +74,7 @@ public class T3LongValidWord {
         }  
         String ans="";
         for(int i=0;i<words.length;i++){
-            boolean flag=true;
+            // boolean flag=true;
             // CHAKRI THOUGHT (CREATES EXTRA SPACE FOR SUBSTRINGS)
             // for(int j=0;j<words[i].length();j++){
             //     if(!trie.search(words[i].substring(0,j+1))){

@@ -38,6 +38,7 @@ public class T4UniqeSubStrings {
         }
         return cnt+1;
     }
+
     public static void main(String[] args) {
         String st = "abc";
         System.out.println(countDistinctSubstring(st));

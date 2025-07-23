@@ -95,9 +95,8 @@ public class T2 {
         Node node = root;
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
-            Node next = node.get(ch);
-            next.decreasePrefix();
-            node = next;
+            node = node.get(ch);
+            node.decreasePrefix();
         }
         node.decreaseEnd();
     }

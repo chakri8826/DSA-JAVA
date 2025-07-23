@@ -38,7 +38,7 @@
 //             char opposite = (ch=='0')?'1':'0';
 //             if(node.containsKey(opposite)){
 //                 xor.append('1');
-//                 node = node.get(opposite);
+//                 node = node.get(opposite);   
 //             }
 //             else{
 //                 xor.append('0');
