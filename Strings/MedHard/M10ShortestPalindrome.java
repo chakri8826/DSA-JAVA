@@ -29,7 +29,7 @@ public class M10ShortestPalindrome {
         return -1;
     }
 
-    // BRUTE
+    // BRUTE O(N^2)--> Finging longest palindrome Prefix
     // public String shortestPalindrome(String s) {
     //     if(s.equals(""))return "";
     //     int i = findMaxPali(s);
