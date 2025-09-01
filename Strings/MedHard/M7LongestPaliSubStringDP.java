@@ -60,8 +60,8 @@ public class M7LongestPaliSubStringDP {
     public String longestPalindrome(String s) {
         int start=0,end=0;
         for(int i=0;i<s.length();i++){
-            int evLen = expandAroundCenter(s,i,i);
-            int oddLen = expandAroundCenter(s,i,i+1);
+            int oddLen = expandAroundCenter(s,i,i);
+            int evLen = expandAroundCenter(s,i,i+1);
             int len = Math.max(evLen,oddLen);
             if(len>end-start){
                 start = i-(len-1)/2;

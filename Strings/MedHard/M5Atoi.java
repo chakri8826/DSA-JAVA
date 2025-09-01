@@ -24,3 +24,4 @@ public class M5Atoi {
         return (int)(sign * result);
     }
 }
+    

@@ -1,3 +1,4 @@
+import java.util.*;
 public class B2Isomorphic {
     // public boolean isIsomorphic(String s, String t) {
     //     HashMap<Character, Character> mapST = new HashMap<>();
