@@ -40,4 +40,12 @@ public class M14KMPAlgo {
             else i=lps[i-1];
         }
     }
+    public static void main(String[] args) {
+        // M14KMPAlgo obj = new M14KMPAlgo();
+        // String txt = "ABABDABACDABABCABAB";
+        // String pat = "ABABCABAB";
+        // System.out.println(obj.search(pat,txt));
+        System.out.println(0%2);
+    }
 }
+
