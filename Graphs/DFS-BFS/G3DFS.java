@@ -31,8 +31,8 @@ public class G3DFS {
             }
         }
     }
+    
     public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
-        Queue<Integer> q = new LinkedList<>();
         ArrayList<Integer> res = new ArrayList<>();
         boolean vis[] = new boolean[adj.size()];
         DFS(0,vis,res,adj);

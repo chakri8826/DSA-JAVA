@@ -1,6 +1,26 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class G5ConctdCmpsList {
+
+    // BFS APPROACH
+    public void BFS(int val,boolean[] vis,ArrayList<Integer> res,ArrayList<ArrayList<Integer>> adj){
+        Queue<Integer> q = new LinkedList<>();
+        q.add(val);
+        vis[val]=true;
+        while(!q.isEmpty()){
+            int v = q.poll();
+            res.add(v);
+            for(int num:adj.get(v)){
+                if(!vis[num]){
+                    q.offer(num);
+                    vis[num]=true;
+                }
+            }
+        }
+    }
+
+
+    // DFS APPROACH
     public void DFS(int val,boolean[] vis,ArrayList<Integer> res,ArrayList<ArrayList<Integer>> adj){
         vis[val]=true;
         res.add(val);
@@ -39,9 +59,8 @@ public class G5ConctdCmpsList {
         int V = 5; // number of vertices
         int[][] edges = {
             {0, 1},
-            {0, 2},
-            {1, 3},
-            {1, 4}
+            {2, 1},
+            {3, 4}
         };
 
         G5ConctdCmpsList g = new G5ConctdCmpsList();
