@@ -13,7 +13,7 @@ class Pair {
 public class G9CycleDetectionBFSDFS {
     public boolean BFS(int start, ArrayList<ArrayList<Integer>> adj, boolean[] vis){
         Queue<Pair> q = new LinkedList<>();
-        vis[0]=true;
+        vis[start]=true;
         q.offer(new Pair(start,-1));
         
         while(!q.isEmpty()){
@@ -28,7 +28,7 @@ public class G9CycleDetectionBFSDFS {
             }
         }
         return false;
-    }
+    } 
     public boolean DFS(int start,int par, ArrayList<ArrayList<Integer>> adj, boolean[] vis){
         vis[start]=true;
         for(int it:adj.get(start)){

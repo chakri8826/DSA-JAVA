@@ -68,7 +68,14 @@ public class G17TopologicalSortBFSDFS {
                 if(inDeg[it]==0)q.offer(it);
             }
         }
- 
         return res;
+    }
+    public static void main(String[] args) {
+        G17TopologicalSortBFSDFS g = new G17TopologicalSortBFSDFS();
+        ArrayList<ArrayList<Integer>> edges = new ArrayList<>();
+        edges.add(new ArrayList<>(Arrays.asList(0, 1)));
+        edges.add(new ArrayList<>(Arrays.asList(1, 2)));
+        edges.add(new ArrayList<>(Arrays.asList(2, 3)));
+        System.out.println(g.topologicalSort(edges, 4, 3));
     }
 }

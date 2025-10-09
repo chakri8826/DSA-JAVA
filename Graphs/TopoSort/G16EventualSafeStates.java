@@ -17,7 +17,7 @@ class G16EventualSafeStates {
         check[start]=1;
         preVis[start]=0;
         return false;
-    }
+    } 
     public List<Integer> eventualSafeNodes(int[][] graph) {
         // DFS
         // List<Integer> res = new ArrayList<>();

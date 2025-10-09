@@ -51,7 +51,6 @@ public class G18AlienDictionary {
             String w1 = words[i];
             String w2 = words[i+1];
 
-            
             if(w1.startsWith(w2) && w1.length() > w2.length()) return "";
 
             int len = Math.min(w1.length(), w2.length());

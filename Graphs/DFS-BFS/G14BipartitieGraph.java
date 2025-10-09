@@ -1,31 +1,28 @@
 import java.util.*;
 
 public class G14BipartitieGraph {
-    // BFS
-    public boolean check(int start,ArrayList<ArrayList<Integer>> li,int vis[]){
-        Queue<Integer> q = new LinkedList<>();
-        q.offer(start);
-        vis[start]=0;
-        while(!q.isEmpty()){
-            int node = q.poll();
-            for(int it:li.get(node)){
-                if(vis[it]==-1){
-                    if(vis[node]==0){
-                        vis[it]=1;
-                    }
-                    else if(vis[node]==1){
-                        vis[it]=0;
-                    }
-                    q.offer(it);
-                }
-                else if(vis[it]==vis[node])return false;
-            }
-        }
-        return true;
-    }
 
-    // DFS
-     public boolean DFS(int start,int col,ArrayList<ArrayList<Integer>> li,int vis[]){
+    // BFS
+    // public boolean check(int start,ArrayList<ArrayList<Integer>> li,int vis[]){
+    //     Queue<Integer> q = new LinkedList<>();
+    //     q.offer(start);
+    //     vis[start]=0;
+    //     while(!q.isEmpty()){
+    //         int node = q.poll();
+    //         for(int it:li.get(node)){
+    //             if(vis[it]==-1){
+    //                 vis[it] = 1-vis[node];
+    //                 q.offer(it);
+    //             }
+    //             else if(vis[it]==vis[node])return false;
+    //         }
+    //     }
+    //     return true;
+    // } 
+     
+
+     // DFS
+    public boolean DFS(int start,int col,ArrayList<ArrayList<Integer>> li,int vis[]){
         vis[start]=col;
         for(int it:li.get(start)){
             if(vis[it]==-1){
@@ -35,6 +32,7 @@ public class G14BipartitieGraph {
         }
         return true;
     }
+
     public boolean isBipartite(int[][] graph) {
         int n=graph.length;
         int m=graph[0].length;
@@ -52,10 +50,17 @@ public class G14BipartitieGraph {
 
         for(int i=0;i<n;i++){
             if(vis[i]==-1){
-                // if(check(i,li,vis)==false)return false;
-                if(DFS(i,0,li,vis)==false)return false;
+                if(check(i,li,vis)==false)return false;
+                // if(DFS(i,0,li,vis)==false)return false;
             }
         }
+        System.out.println(Arrays.toString(vis));
         return true;
+    }
+ 
+    public static void main(String[] args) {
+        G14BipartitieGraph g = new G14BipartitieGraph();
+        int[][] graph = {{1,3},{0,2},{1,3},{0,2}};
+        System.out.println(g.isBipartite(graph));
     }
 }

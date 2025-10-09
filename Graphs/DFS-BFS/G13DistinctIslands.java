@@ -60,12 +60,18 @@ class G13DistinctIslands {
             for(int j=0;j<m;j++){
                 if(grid[i][j]==1 && !vis[i][j]){
                     ArrayList<String> li = new ArrayList<>();
-                    // DFS(i,j,vis,li,grid,i,j);
-                    BFS(i, j, vis, li, grid, i, j);
+                    DFS(i,j,vis,li,grid,i,j);
+                    // BFS(i, j, vis, li, grid, i, j);
                     st.add(li);
                 }
             }
         }
+        System.out.println(st);
         return st.size();
+    }
+    public static void main(String[] args) {
+        G13DistinctIslands g = new G13DistinctIslands();
+        int[][] grid = {{1,1,0,1,1},{1,0,0,0,0},{0,0,0,0,1},{1,1,0,1,1}};
+        System.out.println(g.countDistinctIslands(grid));
     }
 }

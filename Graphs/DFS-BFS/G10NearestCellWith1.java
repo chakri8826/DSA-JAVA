@@ -45,7 +45,6 @@ public class G10NearestCellWith1 {
             }
         }
         return res;
-        
-        
+                
     }
 }
