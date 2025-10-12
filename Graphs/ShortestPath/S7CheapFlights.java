@@ -37,7 +37,7 @@ public class S7CheapFlights {
             int v = fli[1];
             int wt = fli[2];
             adj.get(u).add(new Pair1(v,wt));
-        }
+        } 
         q.offer(new Pair(0,src,0));
         while(!q.isEmpty()){
             Pair p = q.poll();
