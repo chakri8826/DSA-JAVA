@@ -6,6 +6,7 @@ class Pair{
         this.len = len;
     }
 }
+
 class G20WordLadder1{
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Set<String> st = new HashSet<>(wordList);
@@ -31,3 +32,4 @@ class G20WordLadder1{
         return 0;
     }
 }
+

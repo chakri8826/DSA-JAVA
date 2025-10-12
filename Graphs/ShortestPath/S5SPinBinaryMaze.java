@@ -13,9 +13,8 @@ class Pair {
 }
 
 public class S5SPinBinaryMaze {
-     int shortestPath(int[][] grid, int[] source, int[] destination) {
-        if (grid[source[0]][source[1]] == 0 || grid[destination[0]][destination[1]] == 0)
-        return -1;
+    int shortestPath(int[][] grid, int[] source, int[] destination) {
+        if (grid[source[0]][source[1]] == 0 || grid[destination[0]][destination[1]] == 0) return -1;
         if (source[0] == destination[0] && source[1] == destination[1]) return 0;
         
         int n = grid.length,m = grid[0].length;

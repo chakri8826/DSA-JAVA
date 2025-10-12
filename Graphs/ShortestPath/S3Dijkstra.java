@@ -1,11 +1,9 @@
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
 class Pair {
     int node, dis;
-
     public Pair(int node, int dis) {
         this.node = node;
         this.dis = dis;
