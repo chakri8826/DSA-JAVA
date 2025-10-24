@@ -14,7 +14,7 @@ class DSU{
         if(parent[x]==x)return x;
         return parent[x]=find(parent[x]);
     }
-    
+
     public void unionByRank(int u,int v){
         int px=find(u);
         int py=find(v);
@@ -29,7 +29,7 @@ class DSU{
             rank[px]++;
         }
     }
-}
+} 
 public class M5AccountsMerge {
     static ArrayList<ArrayList<String>> accountsMerge(ArrayList<ArrayList<String>> accounts) {
         // code here
@@ -52,11 +52,20 @@ public class M5AccountsMerge {
         }
         
         for(Map.Entry<String,Integer> it:map.entrySet()){
-            String  detail = it.getKey();
+            String  detail = it.getKey();                                                               
             int node = dsu.find(it.getValue());
             res.get(node).add(detail);
         }
         
+        /* 
+            li[1] = ["a@gmail.com", "b@gmail.com", "c@gmail.com"]
+            li[0] = []
+
+            i = 0 → skipped (empty)
+            i = 1 → processed
+            accounts.get(1).get(0) → "John" ✅ as this problem tells, persona having same emails will have same name so it works as we keep, 0 as root (or) 
+            1 as root.
+        */
         ArrayList<ArrayList<String>> ans = new ArrayList<>();
         for(int i=0;i<res.size();i++){
             if(res.get(i).size()==0)continue;

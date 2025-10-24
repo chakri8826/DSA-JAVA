@@ -29,8 +29,8 @@ class DSU{
             rank[px]++;
         }
     }
-
 }
+
 public class M4MostStonesRemoved {
     public int removeStones(int[][] stones) {
         int maxRow=0,maxCol=0;
@@ -46,7 +46,7 @@ public class M4MostStonesRemoved {
             dsu.unionByRank(u,v);
             set.add(u);
             set.add(v);
-        }
+        } 
         int cnt=0;
         for(int node:set){
             if(dsu.parent[node]==node){
