@@ -58,6 +58,8 @@ public class M6NoOfIslands2 {
             for(int dir=0;dir<4;dir++){
                 int nx = x+dx[dir];
                 int ny = y+dy[dir];
+                // check if the neighbor visited(1) and only if parents are different then union them, becoz diff parents means diff islands, 
+                // we need to check all 4 directions
                 if(nx>=0 && nx<n && ny>=0 && ny<m && vis[nx][ny]){
                     int neighId = nx*m+ny;
                     if(dsu.find(currId)!=dsu.find(neighId)){

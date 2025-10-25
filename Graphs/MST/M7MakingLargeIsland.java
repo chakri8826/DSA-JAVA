@@ -45,6 +45,7 @@ public class M7MakingLargeIsland {
                         int ny = j+dy[dir];
                         if(nx>=0 && nx<n && ny>=0 && ny<n && grid[nx][ny]==1){
                             int neighId = mark[nx][ny];
+                            // for first time adding it retuns true, further time returns false
                             if(seen.add(neighId)){ 
                                 size += map.get(neighId);
                             }

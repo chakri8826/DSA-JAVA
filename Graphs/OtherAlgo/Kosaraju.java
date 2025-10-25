@@ -35,7 +35,7 @@ public class Kosaraju {
             for(int i=0;i<n;i++){
                 vis[i]=false;
                 reversedGraph.add(new ArrayList<>());
-            }
+            } 
             for(int u=0;u<n;u++){
                 for(int v:adj.get(u)){
                     reversedGraph.get(v).add(u);
