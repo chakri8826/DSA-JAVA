@@ -8,7 +8,7 @@ import java.util.*;
 public class A7MergeIntervals {
  
     public static int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals,(i1,i2)->i1[0]-i2[0]);
+        Arrays.sort(intervals,(a,b)->Integer.compare(a[0], b[0]));
         int n = intervals.length;
         ArrayList<int[]> res = new ArrayList<>();
         int[] prev = intervals[0]; 

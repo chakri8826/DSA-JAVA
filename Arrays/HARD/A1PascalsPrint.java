@@ -24,3 +24,4 @@ public class A1PascalsPrint {
         System.out.println(Integer.MAX_VALUE);
     }
 }
+

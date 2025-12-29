@@ -1,5 +1,5 @@
 public class M13AddTwoLL {
-    // CHANING THE INPUT DATA (SC=>O(1))
+    // CHANING THE INPUT DATA (SC=>O(1))  TC-> O(max(n, m))
     // public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     //     ListNode t1 = l1,t2 = l2;
     //     ListNode dummy = new ListNode(-1);
@@ -36,7 +36,7 @@ public class M13AddTwoLL {
     // }
 
 
-    // WE ARE NOT CHANGING INPUT DATA HERE
+    // WE ARE NOT CHANGING INPUT DATA HERE,  SC=>O(max(n, m))  TC-> O(max(n, m))
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode t1 = l1,t2 = l2;
         ListNode dummy = new ListNode(-1);

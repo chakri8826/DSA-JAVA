@@ -39,4 +39,5 @@ public class M7DelFromEnd {
         slow.next=slow.next.next;
         return head;
     }
+
 }

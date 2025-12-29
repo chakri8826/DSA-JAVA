@@ -1,4 +1,4 @@
-public class M8ReverseEachWord {
+class M8ReverseEachWord {
     public String reverse(String str){
         char[] arr = str.toCharArray();
         int i=0,j=arr.length-1;

@@ -27,6 +27,7 @@ public class A10CountInversions {
                 cnt+=(mid-i+1);
             }
         }
+        
         while(i<=mid){
             b[k++]=arr[i++];
         }
@@ -52,6 +53,5 @@ public class A10CountInversions {
     }
     static int inversionCount(int arr[]) {
         return merge(arr,0,arr.length-1);
-        
     }
 }
