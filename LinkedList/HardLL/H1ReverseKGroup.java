@@ -47,47 +47,95 @@ class H1ReverseKGroup{
 
 
     // PERFECT(NAMES AND CLEAN-CODE)
-    public ListNode reverse(ListNode head){
-        ListNode previous = null, current = head, nextNode = head;
-        while(nextNode != null){
-            nextNode = nextNode.next;
-            current.next = previous;
-            previous = current;
-            current = nextNode;
-        }
-        return previous;
-    }
+    // public ListNode reverse(ListNode head){
+    //     ListNode previous = null, current = head, nextNode = head;
+    //     while(nextNode != null){
+    //         nextNode = nextNode.next;
+    //         current.next = previous;
+    //         previous = current;
+    //         current = nextNode;
+    //     }
+    //     return previous;
+    // }
     
-    public ListNode findKthNode(ListNode head, int k){
-        int count = 1;
-        ListNode pointer = head;
-        while(pointer != null && count < k){
-            pointer = pointer.next;
-            count++;
+    // public ListNode findKthNode(ListNode head, int k){
+    //     int count = 1;
+    //     ListNode pointer = head;
+    //     while(pointer != null && count < k){
+    //         pointer = pointer.next;
+    //         count++;
+    //     }
+    //     return pointer;
+    // }
+
+    // public ListNode reverseKGroup(ListNode head, int k) {
+    //     ListNode temp = head, prevGroupEnd = null;
+    //     while(temp != null){
+    //         ListNode groupStart = temp;
+    //         ListNode groupEnd = findKthNode(temp, k);
+    //         if(groupEnd == null){
+    //             prevGroupEnd.next = temp;
+    //             return head;
+    //         }
+    //         temp = groupEnd.next;
+    //         groupEnd.next = null;
+    //         ListNode newHead = reverse(groupStart);
+    //         if(head == groupStart){
+    //             head = newHead;
+    //         }
+    //         if(prevGroupEnd != null){
+    //             prevGroupEnd.next = newHead;
+    //         }
+    //         prevGroupEnd = groupStart;
+    //     }
+    //     return head;
+    // }
+
+
+    // OWN CODE
+    public ListNode getKthNode(ListNode head, int k){
+        while(head!=null && k!=0){
+            head=head.next;
+            k--;
         }
-        return pointer;
+        return head;
+    }
+
+    public ListNode reverse(ListNode head){
+        ListNode prev=null,curr=head,next=null;
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode temp = head, prevGroupEnd = null;
-        while(temp != null){
-            ListNode groupStart = temp;
-            ListNode groupEnd = findKthNode(temp, k);
-            if(groupEnd == null){
-                prevGroupEnd.next = temp;
-                return head;
+        if(head == null || k == 1) return head;
+
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+
+        ListNode temp = head, next = null, prev = dummy, kthNode = null;
+        
+        while(temp!=null){
+            kthNode = getKthNode(temp,k-1);
+            if(kthNode==null){
+                prev.next = temp;
+                break;
             }
-            temp = groupEnd.next;
-            groupEnd.next = null;
-            ListNode newHead = reverse(groupStart);
-            if(head == groupStart){
-                head = newHead;
-            }
-            if(prevGroupEnd != null){
-                prevGroupEnd.next = newHead;
-            }
-            prevGroupEnd = groupStart;
-        }
-        return head;
+
+            next = kthNode.next;
+            kthNode.next = null;
+
+            ListNode newHead = reverse(temp);
+            prev.next = newHead; 
+
+            prev = temp;
+            temp = next;
+        }   
+        return dummy.next;     
     }
 }

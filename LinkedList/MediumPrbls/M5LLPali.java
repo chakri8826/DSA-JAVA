@@ -1,8 +1,7 @@
-
 class ListNode {
     int val;
     ListNode next;
-    
+
     ListNode(int val) {
         this.val = val;
         this.next = null;
@@ -14,39 +13,37 @@ public class M5LLPali {
     // ListNode temp = head;
     // ArrayList<Integer> li = new ArrayList<>();
     // while(temp!=null){
-    //     li.add(temp.val);
-    //     temp=temp.next;
+    // li.add(temp.val);
+    // temp=temp.next;
     // }
-    //     int l=0,r=li.size()-1;
-    //     while(l<r){
-    //         if(li.get(l)==li.get(r)){
-    //             l++;
-    //             r--;
-    //         }
-    //         else{
-    //             return false;
-    //         }
-    //     }
-    //     return true;
+    // int l=0,r=li.size()-1;
+    // while(l<r){
+    // if(li.get(l)==li.get(r)){
+    // l++;
+    // r--;
+    // }
+    // else{
+    // return false;
+    // }
+    // }
+    // return true;
     // }
 
-
-    //BRUTE-FORCE
+    // BRUTE-FORCE
     // public boolean isPalindrome(ListNode head) {
-    //     Stack<Integer> st = new Stack<>();
-    //     ListNode temp = head;
-    //     while(temp!=null){
-    //         st.push(temp.val);
-    //         temp=temp.next;
-    //     }
-    //     temp=head;
-    //     while(temp!=null){
-    //         if(temp.val!=st.pop()) return false;
-    //         temp=temp.next;
-    //     }
-    //     return true;    
+    // Stack<Integer> st = new Stack<>();
+    // ListNode temp = head;
+    // while(temp!=null){
+    // st.push(temp.val);
+    // temp=temp.next;
     // }
-
+    // temp=head;
+    // while(temp!=null){
+    // if(temp.val!=st.pop()) return false;
+    // temp=temp.next;
+    // }
+    // return true;
+    // }
 
     public ListNode reverse(ListNode head) {
         ListNode temp = head, curr = head, prev = null;
@@ -59,33 +56,30 @@ public class M5LLPali {
         return prev;
     }
 
+    public boolean isPalindrome(ListNode head) {
+        if (head == null || head.next == null)
+            return true;
+        ListNode slow = head, fast = head;
 
-
-
-public boolean isPalindrome(ListNode head){
-    if(head==null || head.next==null) return true;
-    ListNode slow=head,fast=head;
-
-    while(fast!=null && fast.next!=null){
-        slow=slow.next;
-        fast=fast.next.next;
-    }
-    ListNode revHead=reverse(slow);
-    ListNode secondHalf=revHead;
-    fast=head;
-    boolean isPali=true;
-    while(revHead!=null){
-        if(fast.val!=revHead.val){
-            isPali=false;
-            break;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
-        revHead=revHead.next;
-        fast=fast.next;
+        ListNode revHead = reverse(slow);
+        ListNode secondHalf = revHead;
+        fast = head;
+        boolean isPali = true;
+        while (revHead != null) {
+            if (fast.val != revHead.val) {
+                isPali = false;
+                break;
+            }
+            revHead = revHead.next;
+            fast = fast.next;
+        }
+        reverse(secondHalf);
+        return isPali;
     }
-    reverse(secondHalf);
-    return isPali;
-}
-
 
     public void traverse(ListNode head) {
         ListNode temp = head;
