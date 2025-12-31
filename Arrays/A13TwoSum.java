@@ -15,7 +15,9 @@ public class A13TwoSum {
     // }
 
 
-    // BETTER
+    // BETTER --> Think like this:
+                // “I will only form a pair using numbers I have already seen.” so we use single pass with out storing alll the nums initiallly in the map,
+                // this avoids checking the same number twice
     // public int[] twoSum(int[] nums, int target){
     //     int n=nums.length;
     //     HashMap<Integer,Integer> map = new HashMap<>();
