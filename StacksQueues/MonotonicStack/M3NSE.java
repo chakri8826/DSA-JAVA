@@ -8,7 +8,7 @@ public class M3NSE {
         ArrayList<Integer> res = new ArrayList<>(Collections.nCopies(n, -1));
         Stack<Integer> st = new Stack<>();
         for(int i=n-1;i>=0;i--){
-            while(!st.isEmpty() && arr.get(i)<=st.peek()){
+            while(!st.isEmpty() && st.peek()>=arr.get(i)){
                 st.pop();
             }
             res.set(i,st.isEmpty()?-1:st.peek());

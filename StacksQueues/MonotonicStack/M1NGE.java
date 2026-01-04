@@ -29,49 +29,49 @@ public class M1NGE {
 
 
 
-    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        int n = nums1.length,m = nums2.length;
-        int res[] = new int[m];
-        int fin[] = new int[n];
-
-        Stack<Integer> st = new Stack<>();
-        for(int i=m-1;i>=0;i--){
-            while(!st.isEmpty() && st.peek()<nums2[i]){
-                st.pop();
-            }
-            res[i]=st.isEmpty()?-1:st.peek();
-            st.push(nums2[i]);
-        }
-
-        HashMap<Integer,Integer> map = new HashMap<>();
-        for(int i=0;i<m;i++){
-            map.put(nums2[i],i);
-        }
-        for(int i=0;i<n;i++){
-            int ind = map.get(nums1[i]);
-            fin[i]=res[ind];
-        }
-        return fin;
-    }
-
-
-    // AVOIDING ==> res[]
     // public int[] nextGreaterElement(int[] nums1, int[] nums2) {
     //     int n = nums1.length,m = nums2.length;
+    //     int res[] = new int[m];
+    //     int fin[] = new int[n];
+
     //     Stack<Integer> st = new Stack<>();
-    //     HashMap<Integer,Integer> map = new HashMap<>();
     //     for(int i=m-1;i>=0;i--){
     //         while(!st.isEmpty() && st.peek()<nums2[i]){
     //             st.pop();
     //         }
-    //         map.put(nums2[i],st.isEmpty() ?-1:st.peek());
+    //         res[i]=st.isEmpty()?-1:st.peek();
     //         st.push(nums2[i]);
     //     }
-    //     int fin[] = new int[n];
-    //     for(int i=0;i<n;i++){
-    //         fin[i]=map.get(nums1[i]);
-    //     }
 
+    //     HashMap<Integer,Integer> map = new HashMap<>();
+    //     for(int i=0;i<m;i++){
+    //         map.put(nums2[i],i);
+    //     }
+    //     for(int i=0;i<n;i++){
+    //         int ind = map.get(nums1[i]);
+    //         fin[i]=res[ind];
+    //     }
     //     return fin;
     // }
+
+
+    // AVOIDING ==> res[]
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        int n = nums1.length,m = nums2.length;
+        Stack<Integer> st = new Stack<>();
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i=m-1;i>=0;i--){
+            while(!st.isEmpty() && st.peek()<=nums2[i]){
+                st.pop();
+            }
+            map.put(nums2[i],st.isEmpty() ?-1:st.peek());
+            st.push(nums2[i]);
+        }
+        int fin[] = new int[n];
+        for(int i=0;i<n;i++){
+            fin[i]=map.get(nums1[i]);
+        }
+
+        return fin;
+    }
 }
