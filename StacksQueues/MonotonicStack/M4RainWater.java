@@ -64,7 +64,7 @@ public class M4RainWater {
     public int trap(int[] height) {
         int n=height.length,l=0,r=n-1,lmax=0,rmax=0,total=0;
         while(l<r){
-            if(height[l]<height[r]){
+            if(height[l]<=height[r]){
                 if(lmax>height[l]){
                     total+=lmax-height[l];
                 }
