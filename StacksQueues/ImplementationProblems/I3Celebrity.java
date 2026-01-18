@@ -87,5 +87,6 @@ public class I3Celebrity {
                        {0, 0, 0, 0},
                        {0, 0, 1, 0}};
         System.out.println(obj.celebrity(mat));
+        System.out.println("--------------------------------");
     }
 }

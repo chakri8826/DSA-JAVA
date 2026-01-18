@@ -1,4 +1,4 @@
-import java.util.Stack;
+import java.util.*;
 
 public class M9LargestRectHistogram {
     // BRUTE - CHAKRI APPROACH
@@ -83,63 +83,71 @@ public class M9LargestRectHistogram {
 
 
 // BETTER
-//     public int[] nse(int[] hts){
-//         int nse[] = new int[hts.length];
-//         Stack<Integer> st = new Stack<>();
-//         for(int i=hts.length-1;i>=0;i--){
-//             while(!st.isEmpty() && hts[i]<=hts[st.peek()]){
-//                 st.pop();
-//             }
-//             nse[i]=st.isEmpty()?hts.length:st.peek();
-//             st.push(i);
-//         }
-//         return nse;
-//     }
-//     public int[] pse(int[] hts){
-//         int pse[] = new int[hts.length];
-//         Stack<Integer> st = new Stack<>();
-//         for(int i=0;i<hts.length;i++){
-//             while(!st.isEmpty() && hts[i]<=hts[st.peek()]){
-//                 st.pop();
-//             }
-//             pse[i]=st.isEmpty()?-1:st.peek();
-//             st.push(i);
-//         }
-//         return pse;
-//     }
-//     public int largestRectangleArea(int[] heights) {
-//         int nse[] = nse(heights);
-//         int pse[] = pse(heights);
-//         int maxi=0;
-//         for(int i=0;i<heights.length;i++){
-//             int area = (nse[i]-pse[i]-1) * heights[i];
-//             maxi=Math.max(area,maxi);
-//         }
-//         return maxi;
-//     }
+    // public int[] nse(int[] hts){
+    //     int nse[] = new int[hts.length];
+    //     Stack<Integer> st = new Stack<>();
+    //     for(int i=hts.length-1;i>=0;i--){
+    //         while(!st.isEmpty() && hts[i]<=hts[st.peek()]){
+    //             st.pop();
+    //         }
+    //         nse[i]=st.isEmpty()?hts.length:st.peek();
+    //         st.push(i);
+    //     }
+    //     return nse;
+    // }
+    // public int[] pse(int[] hts){
+    //     int pse[] = new int[hts.length];
+    //     Stack<Integer> st = new Stack<>();
+    //     for(int i=0;i<hts.length;i++){
+    //         while(!st.isEmpty() && hts[i]<=hts[st.peek()]){
+    //             st.pop();
+    //         }
+    //         pse[i]=st.isEmpty()?-1:st.peek();
+    //         st.push(i);
+    //     }
+    //     return pse;
+    // }
+    // public int largestRectangleArea(int[] heights) {
+    //     int nse[] = nse(heights);
+    //     int pse[] = pse(heights);
+    //     System.out.println(Arrays.toString(nse));
+    //     System.out.println(Arrays.toString(pse));
+    //     int maxi=0;
+    //     for(int i=0;i<heights.length;i++){
+    //         int area = (nse[i]-pse[i]-1) * heights[i];
+    //         maxi=Math.max(area,maxi);
+    //     }
+    //     return maxi;
+    // }
 
 
 
  
 
 // OPTIMAL 
-    public int largestRectangleArea(int[] heights) {
-        Stack<Integer> st = new Stack<>();
-        int maxArea = 0;
-        for(int i=0;i<heights.length;i++){
-            while(!st.isEmpty() && heights[i]<heights[st.peek()]){
-                int ele = heights[st.pop()],nse=i;
-                int pse = st.isEmpty()?-1:st.peek();
-                maxArea = Math.max(ele*(nse-pse-1),maxArea);
-            }
-            st.push(i);
-        }
+    // public int largestRectangleArea(int[] heights) {
+    //     Stack<Integer> st = new Stack<>();
+    //     int maxArea = 0;
+    //     for(int i=0;i<heights.length;i++){
+    //         while(!st.isEmpty() && heights[i]<heights[st.peek()]){
+    //             int ele = heights[st.pop()],nse=i;
+    //             int pse = st.isEmpty()?-1:st.peek();
+    //             maxArea = Math.max(ele*(nse-pse-1),maxArea);
+    //         }
+    //         st.push(i);
+    //     }
 
-        while(!st.isEmpty()){
-            int ele = heights[st.pop()],nse=heights.length;
-            int pse = st.isEmpty()?-1:st.peek();
-            maxArea = Math.max(ele*(nse-pse-1),maxArea);
-        }
-        return maxArea;
+    //     while(!st.isEmpty()){
+    //         int ele = heights[st.pop()],nse=heights.length;
+    //         int pse = st.isEmpty()?-1:st.peek();
+    //         maxArea = Math.max(ele*(nse-pse-1),maxArea);
+    //     }
+    //     return maxArea;
+    // }
+
+    public static void main(String[] args) {
+        M9LargestRectHistogram m9 = new M9LargestRectHistogram();
+        int[] heights = {2,1,5,6,2,3};
+        System.out.println(m9.largestRectangleArea(heights));
     }
 }

@@ -42,4 +42,12 @@ public class Q6ValidParenthesis {
         }
         return stack.isEmpty();
     }
+    public static void main(String[] args) {
+        Q6ValidParenthesis q6 = new Q6ValidParenthesis();
+        System.out.println(q6.isValid("()"));
+        System.out.println(q6.isValid("()[]{}"));
+        System.out.println(q6.isValid("(]"));
+        System.out.println(q6.isValid("([)]"));
+        System.out.println(q6.isValid("{[]}"));
+    }
 }
