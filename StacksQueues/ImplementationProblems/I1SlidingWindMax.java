@@ -34,7 +34,7 @@ public class I1SlidingWindMax {
     //     return res;
     // }
 
-
+    // Optimized
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length,ind=0;
         int res[] = new int[n-k+1];
