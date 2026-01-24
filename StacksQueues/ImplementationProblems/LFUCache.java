@@ -1,9 +1,60 @@
 import java.util.*;
 class LFUCache {
+    
     final int capacity;
     int minFrequency;
     Map<Integer, DLLNode> cache;
     Map<Integer, DoubleLinkedList> frequencyMap;
+    
+    class DLLNode {
+        int key;
+        int val;
+        int frequency;
+        DLLNode prev;
+        DLLNode next;
+
+        public DLLNode(int key, int val) {
+            this.key = key;
+            this.val = val;
+            this.frequency = 1;
+        }
+    }
+
+ 
+    class DoubleLinkedList {
+        int listSize;
+        // Belongs to individual frequency lists Each frequency has its own linked list, so each list manages its own head and tail.
+        DLLNode head,tail;  
+        public DoubleLinkedList() {
+            this.listSize = 0;
+            this.head = new DLLNode(0, 0);
+            this.tail = new DLLNode(0, 0);
+            head.next = tail;
+            tail.prev = head;
+        }
+
+        /** add new node in the head of list and increase list size by 1 **/
+        public void addNode(DLLNode curNode) {
+            DLLNode nextNode = head.next;
+            curNode.next = nextNode;
+            curNode.prev = head;
+            head.next = curNode;
+            nextNode.prev = curNode;
+            listSize++;
+        }
+
+        /** remove input node and decrease list size by 1**/
+        public void removeNode(DLLNode curNode) {
+            DLLNode prevNode = curNode.prev;
+            DLLNode nextNode = curNode.next;
+            prevNode.next = nextNode;
+            nextNode.prev = prevNode;
+            listSize--;
+        }
+
+    }
+
+
  
 
     public LFUCache(int capacity) {
@@ -75,53 +126,7 @@ class LFUCache {
     }
 
  
-    class DLLNode {
-        int key;
-        int val;
-        int frequency;
-        DLLNode prev;
-        DLLNode next;
 
-        public DLLNode(int key, int val) {
-            this.key = key;
-            this.val = val;
-            this.frequency = 1;
-        }
-    }
-
- 
-    class DoubleLinkedList {
-        int listSize;
-        // Belongs to individual frequency lists Each frequency has its own linked list, so each list manages its own head and tail.
-        DLLNode head,tail;  
-        public DoubleLinkedList() {
-            this.listSize = 0;
-            this.head = new DLLNode(0, 0);
-            this.tail = new DLLNode(0, 0);
-            head.next = tail;
-            tail.prev = head;
-        }
-
-        /** add new node in the head of list and increase list size by 1 **/
-        public void addNode(DLLNode curNode) {
-            DLLNode nextNode = head.next;
-            curNode.next = nextNode;
-            curNode.prev = head;
-            head.next = curNode;
-            nextNode.prev = curNode;
-            listSize++;
-        }
-
-        /** remove input node and decrease list size by 1**/
-        public void removeNode(DLLNode curNode) {
-            DLLNode prevNode = curNode.prev;
-            DLLNode nextNode = curNode.next;
-            prevNode.next = nextNode;
-            nextNode.prev = prevNode;
-            listSize--;
-        }
-
-    }
 
 
 
