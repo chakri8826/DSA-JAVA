@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class I1SlidingWindMax {
-       // public int[] maxSlidingWindow(int[] nums, int k) {
+    // public int[] maxSlidingWindow(int[] nums, int k) {
     //     int n = nums.length;
     //     int res[] = new int[n-k+1];
     //     for(int i=0;i<=n-k;i++){
