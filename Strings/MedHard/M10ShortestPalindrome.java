@@ -1,3 +1,5 @@
+import java.util.Arrays;    
+
 public class M10ShortestPalindrome {
     public String reverse(String str){
         char[] arr = str.toCharArray();
@@ -45,11 +47,12 @@ public class M10ShortestPalindrome {
         String rev = new StringBuilder(s).reverse().toString(); //O(n)
         String combined = s+"#"+rev; //O(2n+1)
         int lps[] = findLps(combined); //O(n)
+        System.out.println(Arrays.toString(lps));
         int lenLongPali = lps[lps.length-1]; //O(1)
         String suff = s.substring(lenLongPali); //O(n)
         String pref = new StringBuilder(suff).reverse().toString(); //O(n)
         return pref+s; //O(n)
-    }
+    } 
     public int[] findLps(String str){ //O(n)
         int n = str.length();
         int lps[] = new int[n];
@@ -64,5 +67,10 @@ public class M10ShortestPalindrome {
             else i=lps[i-1];
         }
         return lps;
+    }
+    public static void main(String[] args) {
+        M10ShortestPalindrome obj = new M10ShortestPalindrome();
+        String s = "abcgabca";
+        System.out.println(obj.shortestPalindrome(s));
     }
 }

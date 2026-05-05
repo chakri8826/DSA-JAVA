@@ -32,7 +32,7 @@ public class G12NoOfEnclaves {
                 DFS(i, 0, grid, vis);
             if (grid[i][m - 1] == 1)
                 DFS(i, m - 1, grid, vis);
-        }
+        }   
         for (int j = 0; j < m; j++) {
             if (grid[0][j] == 1)
                 DFS(0, j, grid, vis);

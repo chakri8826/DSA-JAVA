@@ -41,11 +41,12 @@ public class M14KMPAlgo {
         }
     }
     public static void main(String[] args) {
-        // M14KMPAlgo obj = new M14KMPAlgo();
-        // String txt = "ABABDABACDABABCABAB";
-        // String pat = "ABABCABAB";
-        // System.out.println(obj.search(pat,txt));
-        System.out.println(0%2);
+        M14KMPAlgo obj = new M14KMPAlgo();
+        String txt = "sadbutsad";
+        String pat = "sad";
+        // It finds all the occurrences of the pattern in the text
+        System.out.println(obj.search(pat,txt));
+        
     }
 }
 
